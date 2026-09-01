@@ -1,0 +1,44 @@
+id: hello-world
+namespace: tutorial
+labels:
+  name: Hello World
+
+triggers:
+  - id: daily
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: 0 9 * * *
+    disabled: true
+
+inputs:
+  - id: user
+    type: STRING
+    defaults: Rick Astley
+
+tasks:
+  - id: first_task
+    type: io.kestra.plugin.core.output.OutputValues
+    description: Return a value used later in the logged greeting.
+    values:
+      message: "thrilled"
+
+  - id: second_task
+    type: io.kestra.plugin.scripts.shell.Commands
+    description: Run quick shell commands and expose a value as output.
+    commands:
+      - sleep 0.42
+      - echo '::{"outputs":{"returned_data":"mydata"}}::'
+
+  - id: hello_world
+    type: io.kestra.plugin.core.log.Log
+    description: Log a welcome message using the inputs and earlier outputs.
+    message: |
+      Welcome to Kestra, {{ inputs.user }}! 
+      We are {{ outputs.first_task.values.message }} to have you. Here is your output from the second task: {{outputs.second_task.vars}}.
+
+description: |
+  **Use case:** Intro to Kestra that collects a `user` input and writes a friendly log.
+  **Trigger:** Disabled daily run at 09:00, left in place to show how scheduling works.
+  **Highlights:**
+  - Emit sample values to demonstrate how outputs travel between tasks.
+  - Run a shell command and surface its output for downstream use.
+  - Log the combined greeting using both inputs and prior outputs.

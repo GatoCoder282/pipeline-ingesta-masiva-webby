@@ -1,0 +1,18 @@
+FROM kestra/kestra:latest
+
+USER root
+COPY --from=ghcr.io/astral-sh/uv:0.7.17 /uv /uvx /usr/local/bin/
+
+WORKDIR /opt/ingestion
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-spa \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml README.md uv.lock ./
+RUN uv sync --no-dev --no-install-project --frozen
+COPY src ./src
+RUN uv sync --no-dev --frozen
+COPY configs ./configs
+
+ENV INGESTION_DATA_DIR=/workspace/data \
+    PYTHONUNBUFFERED=1

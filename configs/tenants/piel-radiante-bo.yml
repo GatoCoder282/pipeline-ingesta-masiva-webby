@@ -1,0 +1,7 @@
+tenant_slug: piel-radiante-bo
+environment: development
+
+# La credencial se lee de WEBBY_API_TOKEN; nunca se escribe en este archivo.
+webby:
+  base_url: http://localhost:8000
+  token_env: WEBBY_API_TOKEN

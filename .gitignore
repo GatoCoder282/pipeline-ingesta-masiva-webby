@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data is local and may contain store/customer information.
+data/incoming/*
+data/extracted/*
+data/raw/*
+data/processed/*
+data/quarantine/*
+data/reports/*
+data/manifests/*
+data/warehouse/*
+!data/**/.gitkeep
+
+# Local tool state
+.kestra/
+.n8n/
+*.log

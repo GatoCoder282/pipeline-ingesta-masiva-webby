@@ -1,0 +1,49 @@
+id: getting-started-automation
+namespace: tutorial
+
+description: |
+  # Automation example
+  Calls a public API and logs the response. Customize it to alert your tools or run on your own events.
+
+  Descriptions support **Markdown**.
+
+labels:
+  name: "Example: Automation"
+
+tasks:
+  - id: check
+    type: io.kestra.plugin.core.http.Request
+    description: Call a public endpoint and capture the response (no auth needed).
+    uri: https://dummyjson.com/products/1
+
+  - id: report
+    type: io.kestra.plugin.core.log.Log
+    description: Log the outcome so the first run shows a real result.
+    message: |
+      Called the API and got HTTP {{ outputs.check.code }}.
+      Response body:
+      {{ outputs.check.body }}
+
+  # --- SEND A SLACK ALERT (optional) ---
+  # Add a SLACK_WEBHOOK secret, then remove `disabled: true` to enable.
+  - id: notify
+    type: io.kestra.plugin.slack.notifications.SlackIncomingWebhook
+    url: "{{ secret('SLACK_WEBHOOK') }}"
+    messageText: "Kestra Automation ran: API returned HTTP {{ outputs.check.code }}
+      for flow {{ flow.namespace }}.{{ flow.id }} with ID {{ execution.id }}."
+    disabled: true
+
+# --- RUN THE FLOW AUTOMATICALLY (optional) ---
+triggers:
+  # Run via webhook.
+  - id: on_webhook
+    type: io.kestra.plugin.core.trigger.Webhook
+    key: auto4wjtkzwVGBM9yKnjm3yv8r
+    # URI: /api/v1/{tenant}/executions/webhook/{namespace}/{flowId}/auto4wjtkzwVGBM9yKnjm3yv8r
+    disabled: true
+
+  # AND / OR run on a schedule.
+  - id: every_morning
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 8 * * *" # Run every day at 8:00 AM
+    disabled: true

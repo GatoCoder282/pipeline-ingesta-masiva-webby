@@ -1,0 +1,65 @@
+id: getting-started-elt-pipeline
+namespace: tutorial
+
+description: |
+  # ELT pipeline example
+  Downloads a public CSV, aggregates it in embedded DuckDB, and logs the top products. Customize it to read from your own warehouse.
+
+  Descriptions support **Markdown**.
+
+labels:
+  name: "Example: ELT Pipeline"
+
+tasks:
+  - id: extract
+    type: io.kestra.plugin.core.http.Download
+    description: Fetch a public sample orders dataset (no auth needed).
+    uri: https://raw.githubusercontent.com/kestra-io/datasets/main/csv/orders.csv
+
+  - id: transform
+    type: io.kestra.plugin.jdbc.duckdb.Query
+    description: Load the CSV into embedded DuckDB and rank products by revenue.
+    communityExtensions: [] # skip the bundled 'ion' extension
+    inputFiles:
+      orders.csv: "{{ outputs.extract.uri }}"
+    sql: |
+      SELECT
+        product_id,
+        COUNT(*)             AS orders,
+        ROUND(SUM(total), 2) AS revenue,
+        ROUND(AVG(total), 2) AS avg_order_value
+      FROM read_csv_auto('orders.csv', header = true)
+      GROUP BY product_id
+      ORDER BY revenue DESC
+      LIMIT 10;
+    fetchType: FETCH
+
+  - id: report
+    type: io.kestra.plugin.core.log.Log
+    description: Log the headline numbers so the first run shows a real result.
+    message: |
+      Processed {{ outputs.transform.size }} products.
+      Top seller: product {{ outputs.transform.rows[0].product_id }}
+      with {{ outputs.transform.rows[0].orders }} orders and revenue {{ outputs.transform.rows[0].revenue }}.
+
+  # --- SEND A SLACK ALERT (optional) ---
+  # Add a SLACK_WEBHOOK secret, then remove `disabled: true` to enable.
+  - id: notify
+    type: io.kestra.plugin.slack.notifications.SlackIncomingWebhook
+    url: "{{ secret('SLACK_WEBHOOK') }}"
+    messageText: "Kestra report ready: {{ outputs.transform.size }} products processed."
+    disabled: true
+
+# --- RUN THE FLOW AUTOMATICALLY (optional) ---
+triggers:
+  # Trigger via webhook (POST to the generated URL).
+  - id: on_webhook
+    type: io.kestra.plugin.core.trigger.Webhook
+    key: elt7wjtkzwM7yKnjm5yv3r # URI: /api/v1/{tenant}/executions/webhook/{namespace}/{flowId}/elt7wjtkzwM7yKnjm5yv3r
+    disabled: true
+
+  # OR run on a schedule.
+  - id: every_morning
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 8 * * *" # Run every day at 8:00 AM
+    disabled: true

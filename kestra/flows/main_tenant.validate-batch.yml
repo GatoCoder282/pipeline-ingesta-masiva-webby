@@ -1,0 +1,22 @@
+id: validate-batch
+namespace: main.tenant
+description: Ejecuta únicamente la validación local de un lote.
+
+inputs:
+  - id: input_path
+    type: STRING
+  - id: entity
+    type: STRING
+    defaults: productos
+
+tasks:
+  - id: validate
+    type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+    commands:
+      - >-
+        cd /workspace &&
+        uv run --project /opt/ingestion ingestion validate
+        --input "{{ inputs.input_path }}"
+        --entity "{{ inputs.entity }}"

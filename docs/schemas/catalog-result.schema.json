@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webby.local/schemas/catalog-result.schema.json",
+  "title": "Document catalog validation report",
+  "type": "object",
+  "required": ["run_id", "input_kind", "source_file", "entities", "approved_for_publish"],
+  "properties": {
+    "run_id": { "type": "string", "format": "uuid" },
+    "input_kind": { "const": "document" },
+    "source_file": { "type": "string" },
+    "document_type": { "type": "string" },
+    "extraction_engine": { "type": "string" },
+    "total_pages": { "type": "integer", "minimum": 1 },
+    "total_cards": { "type": "integer", "minimum": 0 },
+    "valid_rows": { "type": "integer", "minimum": 0 },
+    "invalid_rows": { "type": "integer", "minimum": 0 },
+    "approved_for_publish": { "type": "boolean" },
+    "entities": {
+      "type": "object",
+      "required": ["productos", "variantes"],
+      "additionalProperties": { "type": "object" }
+    },
+    "issues": { "type": "array", "items": { "type": "object" } },
+    "warnings": { "type": "array", "items": { "type": "object" } },
+    "unparsed_cards": { "type": "array", "items": { "type": "object" } }
+  },
+  "additionalProperties": true
+}

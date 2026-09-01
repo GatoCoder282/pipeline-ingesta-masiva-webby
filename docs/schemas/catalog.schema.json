@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webby.local/schemas/catalog.schema.json",
+  "title": "Canonical catalog result",
+  "type": "object",
+  "required": ["run_id", "source_file", "products", "variants"],
+  "properties": {
+    "run_id": { "type": "string", "format": "uuid" },
+    "source_file": { "type": "string" },
+    "products": { "$ref": "#/$defs/recordList" },
+    "variants": { "$ref": "#/$defs/recordList" }
+  },
+  "$defs": {
+    "recordList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["row_number", "entity", "data", "source"],
+        "properties": {
+          "row_number": { "type": "integer", "minimum": 2 },
+          "entity": { "enum": ["productos", "variantes"] },
+          "data": { "type": "object" },
+          "source": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

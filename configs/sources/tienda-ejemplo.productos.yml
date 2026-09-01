@@ -1,0 +1,18 @@
+source: tienda-ejemplo
+entity: productos
+
+# Las claves son encabezados del archivo de origen y los valores son nombres
+# canónicos del contrato de importación de Webby.
+columns:
+  Código: sku
+  Nombre del producto: nombre
+  Descripción: descripcion
+  Categoría: categoria
+  Marca: marca
+  Precio venta: precio
+  Precio anterior: precio_comparacion
+  Existencias: stock
+  Publicado: activo
+
+defaults:
+  activo: true

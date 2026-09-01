@@ -1,0 +1,17 @@
+flowchart LR
+  A[CSV/XLSX/API] --> B[Source adapter]
+  B --> C[ParsedTable]
+  D[PDF/imagen] --> E[Document adapter]
+  E --> F[Paginas + bloques + confianza]
+  C --> G[Mapping + coercion]
+  F --> H[Segmentacion de tarjetas]
+  H --> I[Productos + variantes candidatos]
+  G --> J[Canonical records]
+  I --> J
+  J --> K[JSON canonico + CSV]
+  J --> L[Deterministic validation]
+  L --> M{Approved?}
+  M -- no --> N[Quarantine + report]
+  M -- yes --> O[Webby dry-run opcional]
+  O --> P[Human confirmation]
+  P --> Q[Webby import API]

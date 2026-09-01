@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webby.local/schemas/run-manifest.schema.json",
+  "title": "Ingestion run manifest",
+  "type": "object",
+  "required": ["run_id", "entity", "source_file", "source_sha256", "status"],
+  "properties": {
+    "run_id": { "type": "string", "format": "uuid" },
+    "entity": { "enum": ["productos", "variantes", "precios", "clientes"] },
+    "source_file": { "type": "string" },
+    "source_path": { "type": "string" },
+    "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "status": { "enum": ["validated", "blocked", "ready", "approved", "publishing", "publish_failed", "published"] },
+    "approved_by": { "type": ["string", "null"] },
+    "approved_at": { "type": ["string", "null"], "format": "date-time" },
+    "published_at": { "type": ["string", "null"], "format": "date-time" },
+    "webby_job_id": { "type": ["string", "null"] },
+    "input_kind": { "enum": ["table", "document"] },
+    "document_type": { "type": ["string", "null"] },
+    "extraction_engine": { "type": ["string", "null"] },
+    "artifacts": { "type": "object", "additionalProperties": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

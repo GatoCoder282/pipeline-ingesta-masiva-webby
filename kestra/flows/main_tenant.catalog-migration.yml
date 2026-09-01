@@ -1,0 +1,29 @@
+id: catalog-migration
+namespace: main.tenant
+description: >-
+  Valida un archivo de catálogo con la CLI local. La publicación es un paso
+  separado y siempre requiere aprobación explícita.
+
+inputs:
+  - id: input_path
+    type: STRING
+    defaults: /workspace/examples/catalogo-tienda-ejemplo.csv
+  - id: mapping_path
+    type: STRING
+    defaults: /workspace/configs/sources/tienda-ejemplo.productos.yml
+
+tasks:
+  - id: validate
+    type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+    commands:
+      - >-
+        cd /workspace &&
+        uv run --project /opt/ingestion ingestion validate
+        --input "{{ inputs.input_path }}"
+        --mapping "{{ inputs.mapping_path }}"
+
+  - id: review_gate
+    type: io.kestra.plugin.core.flow.Pause
+    description: Revisa el reporte local y aprueba el run_id antes de publicar.

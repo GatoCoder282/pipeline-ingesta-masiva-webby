@@ -1,0 +1,10 @@
+stateDiagram-v2
+  [*] --> validated
+  validated --> blocked: ambiguo o invalido
+  validated --> ready: JSON/CSV valido
+  validated --> blocked: invalid rows
+  validated --> ready: zero blocking errors
+  ready --> approved: human review
+  approved --> publishing: --confirm + remote dry-run ok
+  publishing --> published: Webby job completed
+  publishing --> approved: remote failure

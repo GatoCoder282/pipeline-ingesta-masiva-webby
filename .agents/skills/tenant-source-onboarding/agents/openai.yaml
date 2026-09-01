@@ -1,0 +1,3 @@
+interface:
+  display_name: "Tenant Source Onboarding"
+  short_description: "Add store mappings, fixtures, and regression tests"

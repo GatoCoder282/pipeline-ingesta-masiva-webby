@@ -1,0 +1,4 @@
+Código,Nombre del producto,Descripción,Categoría,Marca,Precio venta,Precio anterior,Existencias,Publicado
+PR-001,Crema hidratante,Crema facial de uso diario,Cuidado facial,Piel Radiante,"89,90","109,90",12,sí
+PR-002,Protector solar FPS 50,Protección solar facial,Protección solar,Piel Radiante,125.50,,8,true
+PR-003,Limpiador facial,Limpiador suave,Cuidado facial,Piel Radiante,75,,-2,sí

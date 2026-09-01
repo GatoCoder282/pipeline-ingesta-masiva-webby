@@ -1,0 +1,14 @@
+# Este archivo documenta la configuración esperada. Docker Compose inyecta la
+# configuración equivalente mediante KESTRA_CONFIGURATION para permitir .env.
+kestra:
+  storage:
+    type: local
+    local:
+      base-path: /app/storage
+  repository:
+    type: postgres
+  queue:
+    type: postgres
+  server:
+    basic-auth:
+      enabled: false

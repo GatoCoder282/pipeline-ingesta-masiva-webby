@@ -1,0 +1,18 @@
+source: piel-radiante-bo
+
+# Perfil inicial para catálogos visuales. Se ajustará cuando incorporemos los
+# archivos reales y sus fixtures anonimizados.
+ocr:
+  language: spa+eng
+  dpi: 220
+  tesseract_config: "--psm 11"
+
+max_pages: 100
+
+layout:
+  # The extractor may still reduce this per page when the visual layout is
+  # single-column. Two columns are needed for horizontal product cards.
+  columns: 2
+  card_vertical_gap: 90
+  confidence_threshold: 0.65
+  block_low_confidence: true

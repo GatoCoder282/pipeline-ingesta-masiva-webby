@@ -1,0 +1,14 @@
+source: piel-radiante-bo
+
+# Files used as source-specific visual rules for this first batch. They are
+# processed and preserved as evidence, but the category index is not treated
+# as a product card.
+category_files:
+  - "WhatsApp Image 2026-08-31 at 19.44.10 (2).jpeg"
+
+# The crossed card at the top is promotional/invalid for this load. Keep only
+# the product below the red line.
+keep_bottom_only:
+  - "WhatsApp Image 2026-08-31 at 19.44.22.jpeg"
+
+excluded_files: []

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Catalog Document Extraction"
+  short_description: "Extract catalogs from PDFs and images with evidence"

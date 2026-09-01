@@ -1,0 +1,83 @@
+id: getting-started-ai-enrichment
+namespace: tutorial
+
+description: |
+  # AI enrichment example
+  Fetches a small public dataset and logs a preview. Customize it to use your own LLM (OpenAI by default, or swap in Anthropic or Google Gemini) to summarize and classify the data.
+
+  Descriptions support **Markdown**.
+
+labels:
+  name: "Example: AI Enrichment"
+
+tasks:
+  - id: extract
+    type: io.kestra.plugin.core.http.Request
+    description: Fetch a few public sample records to enrich (no auth needed).
+    uri: https://dummyjson.com/quotes?limit=3
+
+  - id: preview
+    type: io.kestra.plugin.core.log.Log
+    description: Log the fetched sample so the first run shows a real result.
+    message: |
+      Fetched sample data (HTTP {{ outputs.extract.code }}):
+      {{ outputs.extract.body }}
+
+  # --- ENABLE THE LLM (disabled until you add an API key) -------------
+  # Add your provider's API key as a secret, then remove `disabled: true`
+  # here AND on the `ai_result` task below to see the model's output.
+  #
+  # Using a different provider? Replace only the `provider:` block, e.g.
+  #   Anthropic: type: io.kestra.plugin.ai.provider.Anthropic
+  #              apiKey: "{{ secret('ANTHROPIC_API_KEY') }}"
+  #              modelName: claude-haiku-4-5
+  #   Gemini:    type: io.kestra.plugin.ai.provider.GoogleGemini
+  #              apiKey: "{{ secret('GEMINI_API_KEY') }}"
+  #              modelName: gemini-2.5-flash
+  # Full per-provider examples: https://kestra.io/blueprints?tags=AI
+  - id: enrich
+    type: io.kestra.plugin.ai.completion.ChatCompletion
+    provider:
+      type: io.kestra.plugin.ai.provider.OpenAI
+      apiKey: "{{ secret('OPENAI_API_KEY') }}"
+      modelName: gpt-4o-mini
+    messages:
+      - type: SYSTEM
+        content: You are a data assistant. Reply concisely.
+      - type: USER
+        content: |
+          Summarize the overall theme of these quotes in one sentence, then classify the sentiment of each as POSITIVE / NEUTRAL / NEGATIVE.
+          Data: {{ outputs.extract.body }}
+    disabled: true
+
+  - id: ai_result
+    type: io.kestra.plugin.core.log.Log
+    description: Log the model output. Enable this together with a provider above.
+    message: "AI enrichment:
+
+      {{ outputs.enrich.textOutput }}"
+    disabled: true
+
+  # --- SEND A SLACK ALERT (optional) ---
+  - id: notify
+    type: io.kestra.plugin.slack.notifications.SlackIncomingWebhook
+    url: "{{ secret('SLACK_WEBHOOK') }}"
+    messageText: "AI summary for {{ flow.namespace }}.{{ flow.id }}:
+
+      {{ outputs.enrich.textOutput }}"
+    disabled: true
+
+# --- RUN THE FLOW AUTOMATICALLY (optional) ---
+triggers:
+  # Run via webhook.
+  - id: on_webhook
+    type: io.kestra.plugin.core.trigger.Webhook
+    key: aiZqjkJnKNgM4PsDUOExgRaJ
+    # URI: /api/v1/{tenant}/executions/webhook/{namespace}/{flowId}/aiZqjkJnKNgM4PsDUOExgRaJ
+    disabled: true
+
+  # AND / OR run on a schedule.
+  - id: every_morning
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 8 * * *" # Run every day at 8:00 AM
+    disabled: true
