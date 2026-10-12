@@ -1,0 +1,1899 @@
+{
+  "products": {
+    "source|whatsapp image 2026-08-31 at 19.44.08 (2).jpeg|page|1|name|aceitedelimpieza|bbox|99.0,160.0,756.0,206.0": {
+      "sku": "LIB-0001",
+      "brand": "Libra",
+      "name": "Aceite de Limpieza",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|agefirmingsuppo|bbox|77.0,545.0,361.0,600.0": {
+      "sku": "LIB-0002",
+      "brand": "Libra",
+      "name": "Age & Firming Suppo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|hoja de producto_booster 12.pdf|page|1|name|boostern12|bbox|319.745,156.436,530.182,180.327": {
+      "sku": "LIB-0003",
+      "brand": "Libra",
+      "name": "Booster N°12",
+      "source_file": "hoja de producto_Booster 12.pdf",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsiondelimpiezafacial|bbox|249.0,270.0,512.0,335.0": {
+      "sku": "LIB-0004",
+      "brand": "Libra",
+      "name": "Emulsión de Limpieza Facial",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsionexfoliantefacial|bbox|626.0,277.0,1001.0,347.0": {
+      "sku": "LIB-0005",
+      "brand": "Libra",
+      "name": "Emulsión Exfoliante Facial",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpieza|bbox|105.0,142.0,674.0,188.0": {
+      "sku": "LIB-0006",
+      "brand": "Libra",
+      "name": "Gel de Limpieza",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09.jpeg|page|1|name|geldelimpiezacontrolsebo|bbox|78.0,303.0,469.0,405.0": {
+      "sku": "LIB-0007",
+      "brand": "Libra",
+      "name": "Gel de Limpieza Control Sebo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpiezafacial|bbox|567.0,694.0,953.0,727.0": {
+      "sku": "LIB-0008",
+      "brand": "Libra",
+      "name": "Gel de Limpieza Facial",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geldescongestivo|bbox|565.0,147.0,905.0,182.0": {
+      "sku": "LIB-0009",
+      "brand": "Libra",
+      "name": "Gel Descongestivo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11 (2).jpeg|page|1|name|gelmultimaskc|bbox|187.0,580.0,872.0,641.0": {
+      "sku": "LIB-0010",
+      "brand": "Libra",
+      "name": "Gel Multi Mask C",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geltermicoconfosfatidilcolina|bbox|565.0,439.0,927.0,503.0": {
+      "sku": "LIB-0011",
+      "brand": "Libra",
+      "name": "Gel Térmico con Fosfatidilcolina",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (1).jpeg|page|1|name|hidraesotegt|bbox|84.0,433.0,389.0,489.0": {
+      "sku": "LIB-0012",
+      "brand": "Libra",
+      "name": "Hidra Esotegt",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08.jpeg|page|1|name|locionacidosalicilico|bbox|556.0,296.0,957.0,329.0": {
+      "sku": "LIB-0013",
+      "brand": "Libra",
+      "name": "Loción Ácido Salicílico",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionantibacterial|bbox|298.0,890.0,661.0,918.0": {
+      "sku": "LIB-0014",
+      "brand": "Libra",
+      "name": "Loción Antibacterial",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|lociondescongestiva|bbox|281.0,264.0,678.0,298.0": {
+      "sku": "LIB-0015",
+      "brand": "Libra",
+      "name": "Loción Descongestiva",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionhidratante|bbox|281.0,558.0,606.0,586.0": {
+      "sku": "LIB-0016",
+      "brand": "Libra",
+      "name": "Loción Hidratante",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|hoja de producto_mascara.pdf|page|1|name|mascarahidratante|bbox|316.132,113.597,497.389,188.575": {
+      "sku": "LIB-0017",
+      "brand": "Libra",
+      "name": "Máscara Hidratante",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 1
+    },
+    "source|hoja de producto_mascara.pdf|page|4|name|mascarailuminadora|bbox|316.132,113.597,519.511,188.462": {
+      "sku": "LIB-0018",
+      "brand": "Libra",
+      "name": "Máscara Iluminadora",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 4
+    },
+    "source|hoja de producto_mascara.pdf|page|3|name|mascarapeelingblend|bbox|316.132,113.597,536.242,187.709": {
+      "sku": "LIB-0019",
+      "brand": "Libra",
+      "name": "Máscara Peeling Blend",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto mascaras crema.pdf|page|2|name|mascarapurificante|bbox|319.418,121.418,498.436,180.0": {
+      "sku": "LIB-0020",
+      "brand": "Libra",
+      "name": "Máscara Purificante",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto mascaras crema.pdf|page|3|name|mascarareafirmante|bbox|319.418,121.418,522.655,180.0": {
+      "sku": "LIB-0021",
+      "brand": "Libra",
+      "name": "Máscara Reafirmante",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto_mascara.pdf|page|2|name|mascararegeneradora|bbox|316.132,113.597,556.325,188.575": {
+      "sku": "LIB-0022",
+      "brand": "Libra",
+      "name": "Máscara Regeneradora",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto mascaras crema.pdf|page|1|name|mascaraultranutritiva|bbox|319.418,121.418,563.236,180.0": {
+      "sku": "LIB-0023",
+      "brand": "Libra",
+      "name": "Máscara Ultra Nutritiva",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|nutriprotectsuppo|bbox|567.0,545.0,871.0,600.0": {
+      "sku": "LIB-0024",
+      "brand": "Libra",
+      "name": "Nutri-Protect Suppo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (3).jpeg|page|1|name|oleodelavanda|bbox|237.0,237.0,388.0,306.0": {
+      "sku": "LIB-0025",
+      "brand": "Libra",
+      "name": "Oleo de Lavanda",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13.jpeg|page|1|name|oleopmasajesrelajantes|bbox|103.0,66.0,525.0,170.0": {
+      "sku": "LIB-0026",
+      "brand": "Libra",
+      "name": "Oleo P/ Masajes Relajantes",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.07.jpeg|page|1|name|therapyn10cicaboost|bbox|553.0,321.0,793.0,392.0": {
+      "sku": "LIB-0027",
+      "brand": "Libra",
+      "name": "Therapy N°10 CICABOOST",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.07.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.12.jpeg|page|1|name|therapyn1calming|bbox|566.0,329.0,779.0,400.0": {
+      "sku": "LIB-0028",
+      "brand": "Libra",
+      "name": "Therapy N°1 Calming",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.12.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11 (1).jpeg|page|1|name|therapyn2retinol|bbox|566.0,315.0,787.0,386.0": {
+      "sku": "LIB-0029",
+      "brand": "Libra",
+      "name": "Therapy N°2 Retinol",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.07 (2).jpeg|page|1|name|therapyn3acidohialuronico|bbox|567.0,320.0,963.0,391.0": {
+      "sku": "LIB-0030",
+      "brand": "Libra",
+      "name": "Therapy N°3 Ácido Hialurónico",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.07 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11.jpeg|page|1|name|therapyn4colageno|bbox|553.0,304.0,777.0,375.0": {
+      "sku": "LIB-0031",
+      "brand": "Libra",
+      "name": "Therapy N°4 Colágeno",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11 (3).jpeg|page|1|name|therapyn5instantlift|bbox|553.0,320.0,800.0,391.0": {
+      "sku": "LIB-0032",
+      "brand": "Libra",
+      "name": "Therapy N°5 Instant Lift",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.12 (1).jpeg|page|1|name|therapyn6cvitamin|bbox|553.0,276.0,776.0,347.0": {
+      "sku": "LIB-0033",
+      "brand": "Libra",
+      "name": "Therapy N°6 C Vitamin",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.12 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.07 (1).jpeg|page|1|name|therapyn7bewhite|bbox|553.0,299.0,777.0,370.0": {
+      "sku": "LIB-0034",
+      "brand": "Libra",
+      "name": "Therapy N°7 BE White",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.07 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10 (1).jpeg|page|1|name|therapyn8niacinamide10zn|bbox|553.0,284.0,951.0,355.0": {
+      "sku": "LIB-0035",
+      "brand": "Libra",
+      "name": "Therapy N°8 Niacinamide 10 + ZN",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.12 (2).jpeg|page|1|name|therapyn9hyalub5|bbox|553.0,316.0,776.0,387.0": {
+      "sku": "LIB-0036",
+      "brand": "Libra",
+      "name": "Therapy N°9 Hyalub5",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.12 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.15 (2).jpeg|page|1|name|almaberry|bbox|78.0,181.0,610.0,250.0": {
+      "sku": "VBL-0001",
+      "brand": "Vital Blue",
+      "name": "Alma Berry",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.15 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.16 (1).jpeg|page|1|name|calmextreme|bbox|537.0,916.0,1041.0,1002.0": {
+      "sku": "VBL-0002",
+      "brand": "Vital Blue",
+      "name": "Calm+ Extreme",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.16 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.14.jpeg|page|1|name|caresun|bbox|289.0,62.0,580.0,110.0": {
+      "sku": "VBL-0003",
+      "brand": "Vital Blue",
+      "name": "Caresun",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.14.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.14 (1).jpeg|page|1|name|hydrasensation|bbox|514.0,103.0,1044.0,150.0": {
+      "sku": "VBL-0004",
+      "brand": "Vital Blue",
+      "name": "Hydra Sensation",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.14 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.16.jpeg|page|1|name|joacopure|bbox|51.0,119.0,582.0,163.0": {
+      "sku": "VBL-0005",
+      "brand": "Vital Blue",
+      "name": "Joaco Pure",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.16.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.15 (1).jpeg|page|1|name|removeextremz|bbox|260.0,119.0,1057.0,292.0": {
+      "sku": "VBL-0006",
+      "brand": "Vital Blue",
+      "name": "Remove Extrem Z",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.15 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.14 (3).jpeg|page|1|name|secative|bbox|728.0,152.0,1045.0,262.0": {
+      "sku": "VBL-0007",
+      "brand": "Vital Blue",
+      "name": "Secative",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.14 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.14 (2).jpeg|page|1|name|synergypeel35|bbox|47.0,128.0,608.0,163.0": {
+      "sku": "VBL-0008",
+      "brand": "Vital Blue",
+      "name": "Synergy Peel 3.5",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.14 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.15.jpeg|page|1|name|triabebooster|bbox|65.0,49.0,581.0,96.0": {
+      "sku": "VBL-0009",
+      "brand": "Vital Blue",
+      "name": "Triabe Booster",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.15.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.15.jpeg|page|1|name|trianabooster|bbox|549.0,822.0,1043.0,865.0": {
+      "sku": "VBL-0010",
+      "brand": "Vital Blue",
+      "name": "Triana Booster",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.15.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.16 (2).jpeg|page|1|name|trigacbooster|bbox|48.0,48.0,585.0,101.0": {
+      "sku": "VBL-0011",
+      "brand": "Vital Blue",
+      "name": "Trigac Booster",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.16 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.16 (2).jpeg|page|1|name|tripabbooster|bbox|558.0,825.0,1045.0,870.0": {
+      "sku": "VBL-0012",
+      "brand": "Vital Blue",
+      "name": "Tripab Booster",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.16 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (1).jpeg|page|1|name|acidohialuronicoargireline|bbox|374.0,893.0,939.0,940.0": {
+      "sku": "RAR-0001",
+      "brand": "Rouse Arey",
+      "name": "Ácido Hialurónico + Argireline",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (1).jpeg|page|1|name|acidohialuronicovitcye|bbox|376.0,505.0,918.0,551.0": {
+      "sku": "RAR-0002",
+      "brand": "Rouse Arey",
+      "name": "Ácido Hialurónico + Vit. C y E",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21.jpeg|page|1|name|boosteradn|bbox|369.0,214.0,601.0,242.0": {
+      "sku": "RAR-0003",
+      "brand": "Rouse Arey",
+      "name": "Booster ADN",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.19 (1).jpeg|page|1|name|boosterglow|bbox|372.0,756.0,624.0,786.0": {
+      "sku": "RAR-0004",
+      "brand": "Rouse Arey",
+      "name": "Booster Glow",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.19 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.19 (1).jpeg|page|1|name|boosternrf2|bbox|372.0,199.0,605.0,230.0": {
+      "sku": "RAR-0005",
+      "brand": "Rouse Arey",
+      "name": "Booster Nrf2",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.19 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (1).jpeg|page|1|name|dmaeacidohialuronico|bbox|375.0,160.0,863.0,197.0": {
+      "sku": "RAR-0006",
+      "brand": "Rouse Arey",
+      "name": "DMAE + Ácido Hialurónico",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18 (1).jpeg|page|1|name|exos|bbox|375.0,754.0,496.0,781.0": {
+      "sku": "RAR-0007",
+      "brand": "Rouse Arey",
+      "name": "EXOS+",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18 (2).jpeg|page|1|name|gelexfolianteformen|bbox|374.0,935.0,788.0,966.0": {
+      "sku": "RAR-0008",
+      "brand": "Rouse Arey",
+      "name": "Gel Exfoliante For Men",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21 (1).jpeg|page|1|name|jabonconacsalicilico3|bbox|374.0,212.0,876.0,249.0": {
+      "sku": "RAR-0009",
+      "brand": "Rouse Arey",
+      "name": "Jabón con Ác Salicílico 3%",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17.jpeg|page|1|name|keratolyticmaskpeelingblend|bbox|374.0,226.0,694.0,297.0": {
+      "sku": "RAR-0010",
+      "brand": "Rouse Arey",
+      "name": "Keratolytic Mask Peeling Blend",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (1).jpeg|page|1|name|kitdepeptonas|bbox|401.0,990.0,696.0,1030.0": {
+      "sku": "RAR-0011",
+      "brand": "Rouse Arey",
+      "name": "Kit de Peptonas",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradealmendraymiel|bbox|375.0,580.0,918.0,621.0": {
+      "sku": "RAR-0012",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Almendra y Miel",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradechocolateyargan|bbox|374.0,928.0,966.0,970.0": {
+      "sku": "RAR-0013",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Chocolate y Argán",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,210.0,911.0,251.0": {
+      "sku": "RAR-0014",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Limón y Pomelo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,207.0,911.0,248.0": {
+      "sku": "RAR-0015",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Limón y Pomelo",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,554.0,978.0,596.0": {
+      "sku": "RAR-0016",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Mango y Maracuyá",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,552.0,978.0,593.0": {
+      "sku": "RAR-0017",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Mango y Maracuyá",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,922.0,973.0,964.0": {
+      "sku": "RAR-0018",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Manzana y Papaya",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,919.0,973.0,960.0": {
+      "sku": "RAR-0019",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Manzana y Papaya",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (2).jpeg|page|1|name|mascaradeuvaypera|bbox|374.0,192.0,810.0,232.0": {
+      "sku": "RAR-0020",
+      "brand": "Rouse Arey",
+      "name": "Máscara de Uva y Pera",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22.jpeg|page|1|name|mascarapieldesedaformulabio|bbox|377.0,883.0,785.0,964.0": {
+      "sku": "RAR-0021",
+      "brand": "Rouse Arey",
+      "name": "Máscara Piel de Seda Fórmula Bio",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|name|mascaraprebioticabiodefense|bbox|371.0,197.0,949.0,229.0": {
+      "sku": "RAR-0022",
+      "brand": "Rouse Arey",
+      "name": "Máscara Prebiótica Biodefense",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|name|mascarasoftmask|bbox|375.0,771.0,736.0,803.0": {
+      "sku": "RAR-0023",
+      "brand": "Rouse Arey",
+      "name": "Máscara Soft Mask",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (3).jpeg|page|1|name|mascarastrongcoffee|bbox|372.0,216.0,810.0,295.0": {
+      "sku": "RAR-0024",
+      "brand": "Rouse Arey",
+      "name": "Máscara Strong Coffee",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18 (1).jpeg|page|1|name|pdrn|bbox|375.0,201.0,499.0,229.0": {
+      "sku": "RAR-0025",
+      "brand": "Rouse Arey",
+      "name": "PDRN+",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21.jpeg|page|1|name|peptonadecolageno|bbox|375.0,869.0,790.0,910.0": {
+      "sku": "RAR-0026",
+      "brand": "Rouse Arey",
+      "name": "Peptona de Colágeno",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (2).jpeg|page|1|name|peptonadeelastina|bbox|374.0,597.0,751.0,637.0": {
+      "sku": "RAR-0027",
+      "brand": "Rouse Arey",
+      "name": "Peptona de Elastina",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (2).jpeg|page|1|name|peptonadeplacenta|bbox|374.0,211.0,770.0,250.0": {
+      "sku": "RAR-0028",
+      "brand": "Rouse Arey",
+      "name": "Peptona de Placenta",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.19.jpeg|page|1|name|pert|bbox|375.0,218.0,485.0,246.0": {
+      "sku": "RAR-0029",
+      "brand": "Rouse Arey",
+      "name": "PERT+",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.19.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (1).jpeg|page|1|name|serumadnepdrn|bbox|373.0,226.0,735.0,254.0": {
+      "sku": "RAR-0030",
+      "brand": "Rouse Arey",
+      "name": "Serum Adn. E Pdrn",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20.jpeg|page|1|name|tonico2en1|bbox|374.0,202.0,610.0,234.0": {
+      "sku": "RAR-0031",
+      "brand": "Rouse Arey",
+      "name": "Tónico 2 en 1",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18 (2).jpeg|page|1|name|tonicoengelformen2en1|bbox|375.0,153.0,898.0,195.0": {
+      "sku": "RAR-0032",
+      "brand": "Rouse Arey",
+      "name": "Tónico en Gel For Men 2 en 1",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20.jpeg|page|1|name|tonicofaceteens|bbox|373.0,697.0,723.0,729.0": {
+      "sku": "RAR-0033",
+      "brand": "Rouse Arey",
+      "name": "Tónico Face Teens",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18 (2).jpeg|page|1|name|tonicoformenbioactive|bbox|377.0,595.0,859.0,627.0": {
+      "sku": "RAR-0034",
+      "brand": "Rouse Arey",
+      "name": "Tónico For Men Bio Active",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18 (2).jpeg",
+      "source_page": 1
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|11|name|aceitesaromaticos|bbox|404.385,99.289,746.313,293.664": {
+      "sku": "ZOE-0001",
+      "brand": "ZO-É",
+      "name": "Aceites Aromáticos",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 11
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|43|name|acidoazelaico20|bbox|428.308,831.611,491.825,853.295": {
+      "sku": "ZOE-0002",
+      "brand": "ZO-É",
+      "name": "Ácido Azelaico 20%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 43
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|45|name|acidocitrico5|bbox|428.308,831.611,491.825,853.295": {
+      "sku": "ZOE-0003",
+      "brand": "ZO-É",
+      "name": "Ácido Cítrico 5%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 45
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|46|name|acidofitico5|bbox|428.308,855.539,491.825,877.223": {
+      "sku": "ZOE-0004",
+      "brand": "ZO-É",
+      "name": "Ácido Fítico 5%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 46
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|41|name|acidoglicolico30|bbox|413.1,808.952,476.616,830.636": {
+      "sku": "ZOE-0005",
+      "brand": "ZO-É",
+      "name": "Ácido Glicólico 30%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 41
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|48|name|acidolactico30|bbox|428.345,840.765,491.862,862.449": {
+      "sku": "ZOE-0006",
+      "brand": "ZO-É",
+      "name": "Ácido Láctico 30%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 48
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|49|name|acidolactobionico20|bbox|428.345,854.239,491.862,875.923": {
+      "sku": "ZOE-0007",
+      "brand": "ZO-É",
+      "name": "Ácido Lactobiónico 20%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 49
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|47|name|acidomandelico30|bbox|428.345,817.265,491.862,838.949": {
+      "sku": "ZOE-0008",
+      "brand": "ZO-É",
+      "name": "Ácido Mandélico 30%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 47
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|50|name|acidoretinoico005|bbox|390.059,73.258,739.332,134.088": {
+      "sku": "ZOE-0009",
+      "brand": "ZO-É",
+      "name": "Ácido Retinóico 0.05%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 50
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|44|name|acidosalicilico20|bbox|428.308,831.611,491.825,853.295": {
+      "sku": "ZOE-0010",
+      "brand": "ZO-É",
+      "name": "Ácido Salicílico 20%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 44
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|51|name|acidotranexamico8|bbox|383.722,75.508,744.534,136.338": {
+      "sku": "ZOE-0011",
+      "brand": "ZO-É",
+      "name": "Ácido Tranexámico 8%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 51
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|28|name|aguamicelar|bbox|45.393,38.009,581.882,150.904": {
+      "sku": "ZOE-0012",
+      "brand": "ZO-É",
+      "name": "Agua Micelar",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 28
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|33|name|barrareparadoraintensiva|bbox|45.393,31.665,737.529,269.439": {
+      "sku": "ZOE-0013",
+      "brand": "ZO-É",
+      "name": "Barra Reparadora Intensiva",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 33
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|40|name|blendahas|bbox|413.1,830.708,476.616,852.392": {
+      "sku": "ZOE-0014",
+      "brand": "ZO-É",
+      "name": "Blend AHA's",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 40
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|15|name|cremaconductoraparadiatermiatecarterapia|bbox|407.907,176.377,742.457,289.174": {
+      "sku": "ZOE-0015",
+      "brand": "ZO-É",
+      "name": "Crema Conductora para Diatermia/Tecarterapia",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 15
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|55|name|cremadeacidoretinoico0025|bbox|380.132,60.825,730.251,140.948": {
+      "sku": "ZOE-0016",
+      "brand": "ZO-É",
+      "name": "Crema de Ácido Retinóico 0.025%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 55
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|56|name|cremadeacidoretinoico005|bbox|380.569,58.907,730.688,141.933": {
+      "sku": "ZOE-0017",
+      "brand": "ZO-É",
+      "name": "Crema de Ácido Retinóico 0.05%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 56
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|10|name|cremaparamasajesmusculares|bbox|405.654,107.698,754.841,292.914": {
+      "sku": "ZOE-0018",
+      "brand": "ZO-É",
+      "name": "Crema para Masajes Musculares",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 10
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|4|name|cremareductoracorporaltermicacaliente|bbox|398.377,48.792,581.811,109.678": {
+      "sku": "ZOE-0019",
+      "brand": "ZO-É",
+      "name": "Crema Reductora Corporal Térmica Caliente",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 4
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|29|name|cremareparadorahidratanteureaal10|bbox|45.393,14.222,742.332,293.82": {
+      "sku": "ZOE-0020",
+      "brand": "ZO-É",
+      "name": "Crema Reparadora Hidratante Urea al 10%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 29
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|22|name|emulsiondelimpieza|bbox|389.647,151.425,731.577,300.222": {
+      "sku": "ZOE-0021",
+      "brand": "ZO-É",
+      "name": "Emulsión de Limpieza",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 22
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|30|name|emulsiondevitaminacliposomada|bbox|45.393,36.598,680.191,168.774": {
+      "sku": "ZOE-0022",
+      "brand": "ZO-É",
+      "name": "Emulsión de Vitamina C Liposomada",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 30
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|23|name|espumadelimpieza|bbox|45.393,38.009,658.699,151.501": {
+      "sku": "ZOE-0023",
+      "brand": "ZO-É",
+      "name": "Espuma de Limpieza",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 23
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|8|name|exfoliantecorporaldecafe|bbox|402.051,158.784,724.035,256.581": {
+      "sku": "ZOE-0024",
+      "brand": "ZO-É",
+      "name": "Exfoliante Corporal de Café",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 8
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|16|name|gelconductorpararadiofrecuencia|bbox|405.511,158.416,747.441,289.213": {
+      "sku": "ZOE-0025",
+      "brand": "ZO-É",
+      "name": "Gel Conductor para Radiofrecuencia",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 16
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|53|name|geldespigmentante|bbox|379.054,52.608,657.146,131.45": {
+      "sku": "ZOE-0026",
+      "brand": "ZO-É",
+      "name": "Gel Despigmentante",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 53
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|13|name|gelneutroparaelectroterapiayecografia|bbox|87.735,45.933,340.117,106.153": {
+      "sku": "ZOE-0027",
+      "brand": "ZO-É",
+      "name": "Gel Neutro para Electroterapia y Ecografía",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 13
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|14|name|gelparacavitacion|bbox|82.991,46.624,346.079,107.042": {
+      "sku": "ZOE-0028",
+      "brand": "ZO-É",
+      "name": "Gel para Cavitación",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 14
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|17|name|gelparahollywoodpeel|bbox|85.991,43.283,291.568,106.942": {
+      "sku": "ZOE-0029",
+      "brand": "ZO-É",
+      "name": "Gel para Hollywood Peel",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 17
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|6|name|gelreafirmantecorporalcriogenico|bbox|83.921,39.931,738.291,157.177": {
+      "sku": "ZOE-0030",
+      "brand": "ZO-É",
+      "name": "Gel Reafirmante Corporal Criogénico",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 6
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|5|name|gelreductorcorporalquemadordegrasalocalizada|bbox|405.0,43.845,750.657,103.993": {
+      "sku": "ZOE-0031",
+      "brand": "ZO-É",
+      "name": "Gel Reductor Corporal Quemador de Grasa Localizada",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 5
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|54|name|gelrenovador|bbox|380.569,55.223,567.088,140.898": {
+      "sku": "ZOE-0032",
+      "brand": "ZO-É",
+      "name": "Gel Renovador",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 54
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|24|name|gelscrub|bbox|390.059,155.345,731.99,304.142": {
+      "sku": "ZOE-0033",
+      "brand": "ZO-É",
+      "name": "Gel Scrub",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 24
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|18|name|hydrafacialapuredetox|bbox|396.847,63.572,748.965,143.272": {
+      "sku": "ZOE-0034",
+      "brand": "ZO-É",
+      "name": "Hydra Facial a Pure Detox",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 18
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|19|name|hydrafacialbacnecontrol|bbox|401.547,58.019,743.477,300.252": {
+      "sku": "ZOE-0035",
+      "brand": "ZO-É",
+      "name": "Hydra Facial B Acne Control",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 19
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|20|name|hydrafacialcrepairboost|bbox|387.618,53.945,729.546,315.189": {
+      "sku": "ZOE-0036",
+      "brand": "ZO-É",
+      "name": "Hydra Facial C Repair Boost",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 20
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|34|name|lipstickmentol|bbox|45.393,38.009,640.809,151.275": {
+      "sku": "ZOE-0037",
+      "brand": "ZO-É",
+      "name": "Lipstick Mentol",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 34
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|26|name|locionantibacterial|bbox|45.393,38.009,729.548,301.305": {
+      "sku": "ZOE-0038",
+      "brand": "ZO-É",
+      "name": "Loción Antibacterial",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 26
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|25|name|locionhumectante|bbox|389.647,170.925,731.577,319.722": {
+      "sku": "ZOE-0039",
+      "brand": "ZO-É",
+      "name": "Loción Humectante",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 25
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|52|name|locionneutralizante|bbox|382.918,48.282,717.526,137.989": {
+      "sku": "ZOE-0040",
+      "brand": "ZO-É",
+      "name": "Loción Neutralizante",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 52
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|7|name|locionreafirmanteparavendasfrias|bbox|404.191,28.32,733.205,128.196": {
+      "sku": "ZOE-0041",
+      "brand": "ZO-É",
+      "name": "Loción Reafirmante para Vendas Frías",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 7
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|27|name|locionrefrescante|bbox|45.393,38.009,688.375,150.904": {
+      "sku": "ZOE-0042",
+      "brand": "ZO-É",
+      "name": "Loción Refrescante",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 27
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|35|name|mascaraantiagecoenzimaq10|bbox|45.393,50.145,792.142,101.668": {
+      "sku": "ZOE-0043",
+      "brand": "ZO-É",
+      "name": "Máscara Antiage Coenzima Q10",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 35
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|9|name|mascaradechocolate|bbox|402.051,144.534,724.037,317.331": {
+      "sku": "ZOE-0044",
+      "brand": "ZO-É",
+      "name": "Máscara de Chocolate",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 9
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|36|name|mascaradescongestiva|bbox|401.155,50.903,703.706,144.888": {
+      "sku": "ZOE-0045",
+      "brand": "ZO-É",
+      "name": "Máscara Descongestiva",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 36
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|38|name|mascaradetoxdecarbonactivo|bbox|45.393,54.572,769.821,143.837": {
+      "sku": "ZOE-0046",
+      "brand": "ZO-É",
+      "name": "Máscara Detox de Carbón Activo",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 38
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|37|name|mascarasecativa|bbox|45.393,52.027,643.299,146.013": {
+      "sku": "ZOE-0047",
+      "brand": "ZO-É",
+      "name": "Máscara Secativa",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 37
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|32|name|pulparegeneradora|bbox|405.0,161.092,746.93,291.889": {
+      "sku": "ZOE-0048",
+      "brand": "ZO-É",
+      "name": "Pulpa Regeneradora",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 32
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|31|name|serumdeacidohialuronicoliposomado|bbox|401.155,163.02,743.081,347.817": {
+      "sku": "ZOE-0049",
+      "brand": "ZO-É",
+      "name": "Sérum de Ácido Hialurónico Liposomado",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 31
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|42|name|tca20|bbox|428.308,831.611,491.825,853.295": {
+      "sku": "ZOE-0050",
+      "brand": "ZO-É",
+      "name": "TCA 20%",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 42
+    }
+  },
+  "variants": {
+    "source|hoja de producto mascaras crema.pdf|page|1|name|mascaraultranutritiva|bbox|319.418,121.418,563.236,180.0|variant|source|hoja de producto mascaras crema.pdf|page|1|row|2|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0023-V01",
+      "sku_producto": "LIB-0023",
+      "presentation": "250grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 1
+    },
+    "source|hoja de producto mascaras crema.pdf|page|1|name|mascaraultranutritiva|bbox|319.418,121.418,563.236,180.0|variant|source|hoja de producto mascaras crema.pdf|page|1|row|3|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0023-V02",
+      "sku_producto": "LIB-0023",
+      "presentation": "500grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 1
+    },
+    "source|hoja de producto mascaras crema.pdf|page|2|name|mascarapurificante|bbox|319.418,121.418,498.436,180.0|variant|source|hoja de producto mascaras crema.pdf|page|2|row|4|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0020-V01",
+      "sku_producto": "LIB-0020",
+      "presentation": "250grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto mascaras crema.pdf|page|2|name|mascarapurificante|bbox|319.418,121.418,498.436,180.0|variant|source|hoja de producto mascaras crema.pdf|page|2|row|5|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0020-V02",
+      "sku_producto": "LIB-0020",
+      "presentation": "500grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto mascaras crema.pdf|page|3|name|mascarareafirmante|bbox|319.418,121.418,522.655,180.0|variant|source|hoja de producto mascaras crema.pdf|page|3|row|6|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0021-V01",
+      "sku_producto": "LIB-0021",
+      "presentation": "250grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto mascaras crema.pdf|page|3|name|mascarareafirmante|bbox|319.418,121.418,522.655,180.0|variant|source|hoja de producto mascaras crema.pdf|page|3|row|7|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0021-V02",
+      "sku_producto": "LIB-0021",
+      "presentation": "500grs",
+      "source_file": "Hoja de producto MASCARAS Crema.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto_mascara.pdf|page|1|name|mascarahidratante|bbox|316.132,113.597,497.389,188.575|variant|source|hoja de producto_mascara.pdf|page|1|row|8|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0017-V01",
+      "sku_producto": "LIB-0017",
+      "presentation": "250grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 1
+    },
+    "source|hoja de producto_mascara.pdf|page|1|name|mascarahidratante|bbox|316.132,113.597,497.389,188.575|variant|source|hoja de producto_mascara.pdf|page|1|row|9|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0017-V02",
+      "sku_producto": "LIB-0017",
+      "presentation": "500grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 1
+    },
+    "source|hoja de producto_mascara.pdf|page|2|name|mascararegeneradora|bbox|316.132,113.597,556.325,188.575|variant|source|hoja de producto_mascara.pdf|page|2|row|10|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0022-V01",
+      "sku_producto": "LIB-0022",
+      "presentation": "250grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto_mascara.pdf|page|2|name|mascararegeneradora|bbox|316.132,113.597,556.325,188.575|variant|source|hoja de producto_mascara.pdf|page|2|row|11|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0022-V02",
+      "sku_producto": "LIB-0022",
+      "presentation": "500grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 2
+    },
+    "source|hoja de producto_mascara.pdf|page|3|name|mascarapeelingblend|bbox|316.132,113.597,536.242,187.709|variant|source|hoja de producto_mascara.pdf|page|3|row|12|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0019-V01",
+      "sku_producto": "LIB-0019",
+      "presentation": "250grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto_mascara.pdf|page|3|name|mascarapeelingblend|bbox|316.132,113.597,536.242,187.709|variant|source|hoja de producto_mascara.pdf|page|3|row|13|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0019-V02",
+      "sku_producto": "LIB-0019",
+      "presentation": "500grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 3
+    },
+    "source|hoja de producto_mascara.pdf|page|4|name|mascarailuminadora|bbox|316.132,113.597,519.511,188.462|variant|source|hoja de producto_mascara.pdf|page|4|row|14|attributes|{\"presentacion\": \"250grs\"}": {
+      "sku": "LIB-0018-V01",
+      "sku_producto": "LIB-0018",
+      "presentation": "250grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 4
+    },
+    "source|hoja de producto_mascara.pdf|page|4|name|mascarailuminadora|bbox|316.132,113.597,519.511,188.462|variant|source|hoja de producto_mascara.pdf|page|4|row|15|attributes|{\"presentacion\": \"500grs\"}": {
+      "sku": "LIB-0018-V02",
+      "sku_producto": "LIB-0018",
+      "presentation": "500grs",
+      "source_file": "hoja de producto_MASCARA.pdf",
+      "source_page": 4
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpieza|bbox|105.0,142.0,674.0,188.0|variant|source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|row|16|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "LIB-0006-V01",
+      "sku_producto": "LIB-0006",
+      "presentation": "200 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpieza|bbox|105.0,142.0,674.0,188.0|variant|source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|row|17|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0006-V02",
+      "sku_producto": "LIB-0006",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpiezafacial|bbox|567.0,694.0,953.0,727.0|variant|source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|row|18|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "LIB-0008-V01",
+      "sku_producto": "LIB-0008",
+      "presentation": "200 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|name|geldelimpiezafacial|bbox|567.0,694.0,953.0,727.0|variant|source|whatsapp image 2026-08-31 at 19.44.08 (1).jpeg|page|1|row|19|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0008-V02",
+      "sku_producto": "LIB-0008",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08.jpeg|page|1|name|locionacidosalicilico|bbox|556.0,296.0,957.0,329.0|variant|source|whatsapp image 2026-08-31 at 19.44.08.jpeg|page|1|row|20|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0013-V01",
+      "sku_producto": "LIB-0013",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.08.jpeg|page|1|name|locionacidosalicilico|bbox|556.0,296.0,957.0,329.0|variant|source|whatsapp image 2026-08-31 at 19.44.08.jpeg|page|1|row|21|attributes|{\"presentacion\": \"250 ml\"}": {
+      "sku": "LIB-0013-V02",
+      "sku_producto": "LIB-0013",
+      "presentation": "250 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.08.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|agefirmingsuppo|bbox|77.0,545.0,361.0,600.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|row|22|attributes|{\"presentacion\": \"50 gr\"}": {
+      "sku": "LIB-0002-V01",
+      "sku_producto": "LIB-0002",
+      "presentation": "50 gr",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|agefirmingsuppo|bbox|77.0,545.0,361.0,600.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|row|23|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "LIB-0002-V02",
+      "sku_producto": "LIB-0002",
+      "presentation": "250 gr",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|nutriprotectsuppo|bbox|567.0,545.0,871.0,600.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|row|24|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "LIB-0024-V01",
+      "sku_producto": "LIB-0024",
+      "presentation": "50 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|name|nutriprotectsuppo|bbox|567.0,545.0,871.0,600.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (1).jpeg|page|1|row|25|attributes|{\"presentacion\": \"250 ml\"}": {
+      "sku": "LIB-0024-V02",
+      "sku_producto": "LIB-0024",
+      "presentation": "250 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geldescongestivo|bbox|565.0,147.0,905.0,182.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|26|attributes|{\"presentacion\": \"1000 g\"}": {
+      "sku": "LIB-0009-V01",
+      "sku_producto": "LIB-0009",
+      "presentation": "1000 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geldescongestivo|bbox|565.0,147.0,905.0,182.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|27|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "LIB-0009-V02",
+      "sku_producto": "LIB-0009",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geldescongestivo|bbox|565.0,147.0,905.0,182.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|28|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "LIB-0009-V03",
+      "sku_producto": "LIB-0009",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geltermicoconfosfatidilcolina|bbox|565.0,439.0,927.0,503.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|29|attributes|{\"presentacion\": \"1000 g\"}": {
+      "sku": "LIB-0011-V01",
+      "sku_producto": "LIB-0011",
+      "presentation": "1000 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geltermicoconfosfatidilcolina|bbox|565.0,439.0,927.0,503.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|30|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "LIB-0011-V02",
+      "sku_producto": "LIB-0011",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|name|geltermicoconfosfatidilcolina|bbox|565.0,439.0,927.0,503.0|variant|source|whatsapp image 2026-08-31 at 19.44.09 (2).jpeg|page|1|row|31|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "LIB-0011-V03",
+      "sku_producto": "LIB-0011",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09.jpeg|page|1|name|geldelimpiezacontrolsebo|bbox|78.0,303.0,469.0,405.0|variant|source|whatsapp image 2026-08-31 at 19.44.09.jpeg|page|1|row|32|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0007-V01",
+      "sku_producto": "LIB-0007",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.09.jpeg|page|1|name|geldelimpiezacontrolsebo|bbox|78.0,303.0,469.0,405.0|variant|source|whatsapp image 2026-08-31 at 19.44.09.jpeg|page|1|row|33|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "LIB-0007-V02",
+      "sku_producto": "LIB-0007",
+      "presentation": "200 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.09.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsiondelimpiezafacial|bbox|249.0,270.0,512.0,335.0|variant|source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|row|34|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "LIB-0004-V01",
+      "sku_producto": "LIB-0004",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsiondelimpiezafacial|bbox|249.0,270.0,512.0,335.0|variant|source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|row|35|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "LIB-0004-V02",
+      "sku_producto": "LIB-0004",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsionexfoliantefacial|bbox|626.0,277.0,1001.0,347.0|variant|source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|row|36|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "LIB-0005-V01",
+      "sku_producto": "LIB-0005",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|name|emulsionexfoliantefacial|bbox|626.0,277.0,1001.0,347.0|variant|source|whatsapp image 2026-08-31 at 19.44.10.jpeg|page|1|row|37|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "LIB-0005-V02",
+      "sku_producto": "LIB-0005",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.10.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11 (2).jpeg|page|1|name|gelmultimaskc|bbox|187.0,580.0,872.0,641.0|variant|source|whatsapp image 2026-08-31 at 19.44.11 (2).jpeg|page|1|row|38|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "LIB-0010-V01",
+      "sku_producto": "LIB-0010",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.11 (2).jpeg|page|1|name|gelmultimaskc|bbox|187.0,580.0,872.0,641.0|variant|source|whatsapp image 2026-08-31 at 19.44.11 (2).jpeg|page|1|row|39|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "LIB-0010-V02",
+      "sku_producto": "LIB-0010",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.11 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (1).jpeg|page|1|name|hidraesotegt|bbox|84.0,433.0,389.0,489.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (1).jpeg|page|1|row|40|attributes|{\"presentacion\": \"50 gr\"}": {
+      "sku": "LIB-0012-V01",
+      "sku_producto": "LIB-0012",
+      "presentation": "50 gr",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (1).jpeg|page|1|name|hidraesotegt|bbox|84.0,433.0,389.0,489.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (1).jpeg|page|1|row|41|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "LIB-0012-V02",
+      "sku_producto": "LIB-0012",
+      "presentation": "250 gr",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|lociondescongestiva|bbox|281.0,264.0,678.0,298.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|42|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0015-V01",
+      "sku_producto": "LIB-0015",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|lociondescongestiva|bbox|281.0,264.0,678.0,298.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|43|attributes|{\"presentacion\": \"250 ml\"}": {
+      "sku": "LIB-0015-V02",
+      "sku_producto": "LIB-0015",
+      "presentation": "250 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionhidratante|bbox|281.0,558.0,606.0,586.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|44|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0016-V01",
+      "sku_producto": "LIB-0016",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionhidratante|bbox|281.0,558.0,606.0,586.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|45|attributes|{\"presentacion\": \"250 ml\"}": {
+      "sku": "LIB-0016-V02",
+      "sku_producto": "LIB-0016",
+      "presentation": "250 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionantibacterial|bbox|298.0,890.0,661.0,918.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|46|attributes|{\"presentacion\": \"1000 ml\"}": {
+      "sku": "LIB-0014-V01",
+      "sku_producto": "LIB-0014",
+      "presentation": "1000 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionantibacterial|bbox|298.0,890.0,661.0,918.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|47|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "LIB-0014-V02",
+      "sku_producto": "LIB-0014",
+      "presentation": "500 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|name|locionantibacterial|bbox|298.0,890.0,661.0,918.0|variant|source|whatsapp image 2026-08-31 at 19.44.13 (2).jpeg|page|1|row|48|attributes|{\"presentacion\": \"250 ml\"}": {
+      "sku": "LIB-0014-V03",
+      "sku_producto": "LIB-0014",
+      "presentation": "250 ml",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.13 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,210.0,911.0,251.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|49|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0014-V01",
+      "sku_producto": "RAR-0014",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,210.0,911.0,251.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|50|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0014-V02",
+      "sku_producto": "RAR-0014",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,554.0,978.0,596.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|51|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0016-V01",
+      "sku_producto": "RAR-0016",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,554.0,978.0,596.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|52|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0016-V02",
+      "sku_producto": "RAR-0016",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,922.0,973.0,964.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|53|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0018-V01",
+      "sku_producto": "RAR-0018",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,922.0,973.0,964.0|variant|source|whatsapp image 2026-08-31 at 19.44.17 (2).jpeg|page|1|row|54|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0018-V02",
+      "sku_producto": "RAR-0018",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.17 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,207.0,911.0,248.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|55|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0015-V01",
+      "sku_producto": "RAR-0015",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascaradelimonypomelo|bbox|374.0,207.0,911.0,248.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|56|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0015-V02",
+      "sku_producto": "RAR-0015",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,552.0,978.0,593.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|57|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0017-V01",
+      "sku_producto": "RAR-0017",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademangoymaracuya|bbox|372.0,552.0,978.0,593.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|58|attributes|{\"presentacion\": \"500g\"}": {
+      "sku": "RAR-0017-V02",
+      "sku_producto": "RAR-0017",
+      "presentation": "500g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,919.0,973.0,960.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|59|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0019-V01",
+      "sku_producto": "RAR-0019",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|name|mascarademanzanaypapaya|bbox|371.0,919.0,973.0,960.0|variant|source|whatsapp image 2026-08-31 at 19.44.18.jpeg|page|1|row|60|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0019-V02",
+      "sku_producto": "RAR-0019",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.18.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (3).jpeg|page|1|name|mascarastrongcoffee|bbox|372.0,216.0,810.0,295.0|variant|source|whatsapp image 2026-08-31 at 19.44.20 (3).jpeg|page|1|row|61|attributes|{\"presentacion\": \"120 g\"}": {
+      "sku": "RAR-0024-V01",
+      "sku_producto": "RAR-0024",
+      "presentation": "120 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.20 (3).jpeg|page|1|name|mascarastrongcoffee|bbox|372.0,216.0,810.0,295.0|variant|source|whatsapp image 2026-08-31 at 19.44.20 (3).jpeg|page|1|row|62|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0024-V02",
+      "sku_producto": "RAR-0024",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.20 (3).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|name|mascaraprebioticabiodefense|bbox|371.0,197.0,949.0,229.0|variant|source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|row|63|attributes|{\"presentacion\": \"120 g\"}": {
+      "sku": "RAR-0022-V01",
+      "sku_producto": "RAR-0022",
+      "presentation": "120 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|name|mascaraprebioticabiodefense|bbox|371.0,197.0,949.0,229.0|variant|source|whatsapp image 2026-08-31 at 19.44.21 (2).jpeg|page|1|row|64|attributes|{\"presentacion\": \"250g\"}": {
+      "sku": "RAR-0022-V02",
+      "sku_producto": "RAR-0022",
+      "presentation": "250g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.21 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradealmendraymiel|bbox|375.0,580.0,918.0,621.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|row|65|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0012-V01",
+      "sku_producto": "RAR-0012",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradealmendraymiel|bbox|375.0,580.0,918.0,621.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|row|66|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0012-V02",
+      "sku_producto": "RAR-0012",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradechocolateyargan|bbox|374.0,928.0,966.0,970.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|row|67|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0013-V01",
+      "sku_producto": "RAR-0013",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|name|mascaradechocolateyargan|bbox|374.0,928.0,966.0,970.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (1).jpeg|page|1|row|68|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0013-V02",
+      "sku_producto": "RAR-0013",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (1).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (2).jpeg|page|1|name|mascaradeuvaypera|bbox|374.0,192.0,810.0,232.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (2).jpeg|page|1|row|69|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0020-V01",
+      "sku_producto": "RAR-0020",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22 (2).jpeg|page|1|name|mascaradeuvaypera|bbox|374.0,192.0,810.0,232.0|variant|source|whatsapp image 2026-08-31 at 19.44.22 (2).jpeg|page|1|row|70|attributes|{\"presentacion\": \"500 g\"}": {
+      "sku": "RAR-0020-V02",
+      "sku_producto": "RAR-0020",
+      "presentation": "500 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22 (2).jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22.jpeg|page|1|name|mascarapieldesedaformulabio|bbox|377.0,883.0,785.0,964.0|variant|source|whatsapp image 2026-08-31 at 19.44.22.jpeg|page|1|row|71|attributes|{\"presentacion\": \"120 g\"}": {
+      "sku": "RAR-0021-V01",
+      "sku_producto": "RAR-0021",
+      "presentation": "120 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22.jpeg",
+      "source_page": 1
+    },
+    "source|whatsapp image 2026-08-31 at 19.44.22.jpeg|page|1|name|mascarapieldesedaformulabio|bbox|377.0,883.0,785.0,964.0|variant|source|whatsapp image 2026-08-31 at 19.44.22.jpeg|page|1|row|72|attributes|{\"presentacion\": \"250 g\"}": {
+      "sku": "RAR-0021-V02",
+      "sku_producto": "RAR-0021",
+      "presentation": "250 g",
+      "source_file": "WhatsApp Image 2026-08-31 at 19.44.22.jpeg",
+      "source_page": 1
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|4|name|cremareductoracorporaltermicacaliente|bbox|398.377,48.792,581.811,109.678|variant|source|catalogo profesional 2026 zoé.pdf|page|4|row|100401|attributes|{\"presentacion\": \"300 ml\"}": {
+      "sku": "ZOE-0019-V01",
+      "sku_producto": "ZOE-0019",
+      "presentation": "300 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 4
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|4|name|cremareductoracorporaltermicacaliente|bbox|398.377,48.792,581.811,109.678|variant|source|catalogo profesional 2026 zoé.pdf|page|4|row|100402|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "ZOE-0019-V02",
+      "sku_producto": "ZOE-0019",
+      "presentation": "500 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 4
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|4|name|cremareductoracorporaltermicacaliente|bbox|398.377,48.792,581.811,109.678|variant|source|catalogo profesional 2026 zoé.pdf|page|4|row|100403|attributes|{\"presentacion\": \"1000 ml\"}": {
+      "sku": "ZOE-0019-V03",
+      "sku_producto": "ZOE-0019",
+      "presentation": "1000 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 4
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|5|name|gelreductorcorporalquemadordegrasalocalizada|bbox|405.0,43.845,750.657,103.993|variant|source|catalogo profesional 2026 zoé.pdf|page|5|row|100504|attributes|{\"presentacion\": \"300 gr\"}": {
+      "sku": "ZOE-0031-V01",
+      "sku_producto": "ZOE-0031",
+      "presentation": "300 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 5
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|5|name|gelreductorcorporalquemadordegrasalocalizada|bbox|405.0,43.845,750.657,103.993|variant|source|catalogo profesional 2026 zoé.pdf|page|5|row|100505|attributes|{\"presentacion\": \"500 gr\"}": {
+      "sku": "ZOE-0031-V02",
+      "sku_producto": "ZOE-0031",
+      "presentation": "500 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 5
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|5|name|gelreductorcorporalquemadordegrasalocalizada|bbox|405.0,43.845,750.657,103.993|variant|source|catalogo profesional 2026 zoé.pdf|page|5|row|100506|attributes|{\"presentacion\": \"1 kg\"}": {
+      "sku": "ZOE-0031-V03",
+      "sku_producto": "ZOE-0031",
+      "presentation": "1 kg",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 5
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|5|name|gelreductorcorporalquemadordegrasalocalizada|bbox|405.0,43.845,750.657,103.993|variant|source|catalogo profesional 2026 zoé.pdf|page|5|row|100507|attributes|{\"presentacion\": \"3,8 kg\"}": {
+      "sku": "ZOE-0031-V04",
+      "sku_producto": "ZOE-0031",
+      "presentation": "3,8 kg",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 5
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|6|name|gelreafirmantecorporalcriogenico|bbox|83.921,39.931,738.291,157.177|variant|source|catalogo profesional 2026 zoé.pdf|page|6|row|100608|attributes|{\"presentacion\": \"300 gr\"}": {
+      "sku": "ZOE-0030-V01",
+      "sku_producto": "ZOE-0030",
+      "presentation": "300 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 6
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|6|name|gelreafirmantecorporalcriogenico|bbox|83.921,39.931,738.291,157.177|variant|source|catalogo profesional 2026 zoé.pdf|page|6|row|100609|attributes|{\"presentacion\": \"500 gr\"}": {
+      "sku": "ZOE-0030-V02",
+      "sku_producto": "ZOE-0030",
+      "presentation": "500 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 6
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|6|name|gelreafirmantecorporalcriogenico|bbox|83.921,39.931,738.291,157.177|variant|source|catalogo profesional 2026 zoé.pdf|page|6|row|100610|attributes|{\"presentacion\": \"1 kg\"}": {
+      "sku": "ZOE-0030-V03",
+      "sku_producto": "ZOE-0030",
+      "presentation": "1 kg",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 6
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|6|name|gelreafirmantecorporalcriogenico|bbox|83.921,39.931,738.291,157.177|variant|source|catalogo profesional 2026 zoé.pdf|page|6|row|100611|attributes|{\"presentacion\": \"3,8 kg\"}": {
+      "sku": "ZOE-0030-V04",
+      "sku_producto": "ZOE-0030",
+      "presentation": "3,8 kg",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 6
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|7|name|locionreafirmanteparavendasfrias|bbox|404.191,28.32,733.205,128.196|variant|source|catalogo profesional 2026 zoé.pdf|page|7|row|100712|attributes|{\"presentacion\": \"1 lt\"}": {
+      "sku": "ZOE-0041-V01",
+      "sku_producto": "ZOE-0041",
+      "presentation": "1 lt",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 7
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|8|name|exfoliantecorporaldecafe|bbox|402.051,158.784,724.035,256.581|variant|source|catalogo profesional 2026 zoé.pdf|page|8|row|100813|attributes|{\"presentacion\": \"300 gr\"}": {
+      "sku": "ZOE-0024-V01",
+      "sku_producto": "ZOE-0024",
+      "presentation": "300 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 8
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|8|name|exfoliantecorporaldecafe|bbox|402.051,158.784,724.035,256.581|variant|source|catalogo profesional 2026 zoé.pdf|page|8|row|100814|attributes|{\"presentacion\": \"500 gr\"}": {
+      "sku": "ZOE-0024-V02",
+      "sku_producto": "ZOE-0024",
+      "presentation": "500 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 8
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|9|name|mascaradechocolate|bbox|402.051,144.534,724.037,317.331|variant|source|catalogo profesional 2026 zoé.pdf|page|9|row|100915|attributes|{\"presentacion\": \"300 ml\"}": {
+      "sku": "ZOE-0044-V01",
+      "sku_producto": "ZOE-0044",
+      "presentation": "300 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 9
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|9|name|mascaradechocolate|bbox|402.051,144.534,724.037,317.331|variant|source|catalogo profesional 2026 zoé.pdf|page|9|row|100916|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "ZOE-0044-V02",
+      "sku_producto": "ZOE-0044",
+      "presentation": "500 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 9
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|10|name|cremaparamasajesmusculares|bbox|405.654,107.698,754.841,292.914|variant|source|catalogo profesional 2026 zoé.pdf|page|10|row|101017|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0018-V01",
+      "sku_producto": "ZOE-0018",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 10
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|10|name|cremaparamasajesmusculares|bbox|405.654,107.698,754.841,292.914|variant|source|catalogo profesional 2026 zoé.pdf|page|10|row|101018|attributes|{\"presentacion\": \"300 ml\"}": {
+      "sku": "ZOE-0018-V02",
+      "sku_producto": "ZOE-0018",
+      "presentation": "300 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 10
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|10|name|cremaparamasajesmusculares|bbox|405.654,107.698,754.841,292.914|variant|source|catalogo profesional 2026 zoé.pdf|page|10|row|101019|attributes|{\"presentacion\": \"500 ml\"}": {
+      "sku": "ZOE-0018-V03",
+      "sku_producto": "ZOE-0018",
+      "presentation": "500 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 10
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|10|name|cremaparamasajesmusculares|bbox|405.654,107.698,754.841,292.914|variant|source|catalogo profesional 2026 zoé.pdf|page|10|row|101020|attributes|{\"presentacion\": \"1000 ml\"}": {
+      "sku": "ZOE-0018-V04",
+      "sku_producto": "ZOE-0018",
+      "presentation": "1000 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 10
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|11|name|aceitesaromaticos|bbox|404.385,99.289,746.313,293.664|variant|source|catalogo profesional 2026 zoé.pdf|page|11|row|101121|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0001-V01",
+      "sku_producto": "ZOE-0001",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 11
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|13|name|gelneutroparaelectroterapiayecografia|bbox|87.735,45.933,340.117,106.153|variant|source|catalogo profesional 2026 zoé.pdf|page|13|row|101322|attributes|{\"presentacion\": \"1 lt\"}": {
+      "sku": "ZOE-0027-V01",
+      "sku_producto": "ZOE-0027",
+      "presentation": "1 lt",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 13
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|13|name|gelneutroparaelectroterapiayecografia|bbox|87.735,45.933,340.117,106.153|variant|source|catalogo profesional 2026 zoé.pdf|page|13|row|101323|attributes|{\"presentacion\": \"5 lt\"}": {
+      "sku": "ZOE-0027-V02",
+      "sku_producto": "ZOE-0027",
+      "presentation": "5 lt",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 13
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|14|name|gelparacavitacion|bbox|82.991,46.624,346.079,107.042|variant|source|catalogo profesional 2026 zoé.pdf|page|14|row|101424|attributes|{\"presentacion\": \"1 lt\"}": {
+      "sku": "ZOE-0028-V01",
+      "sku_producto": "ZOE-0028",
+      "presentation": "1 lt",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 14
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|14|name|gelparacavitacion|bbox|82.991,46.624,346.079,107.042|variant|source|catalogo profesional 2026 zoé.pdf|page|14|row|101425|attributes|{\"presentacion\": \"5 lt\"}": {
+      "sku": "ZOE-0028-V02",
+      "sku_producto": "ZOE-0028",
+      "presentation": "5 lt",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 14
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|15|name|cremaconductoraparadiatermiatecarterapia|bbox|407.907,176.377,742.457,289.174|variant|source|catalogo profesional 2026 zoé.pdf|page|15|row|101526|attributes|{\"presentacion\": \"1 kg\"}": {
+      "sku": "ZOE-0015-V01",
+      "sku_producto": "ZOE-0015",
+      "presentation": "1 kg",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 15
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|16|name|gelconductorpararadiofrecuencia|bbox|405.511,158.416,747.441,289.213|variant|source|catalogo profesional 2026 zoé.pdf|page|16|row|101627|attributes|{\"presentacion\": \"500 gr\"}": {
+      "sku": "ZOE-0025-V01",
+      "sku_producto": "ZOE-0025",
+      "presentation": "500 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 16
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|17|name|gelparahollywoodpeel|bbox|85.991,43.283,291.568,106.942|variant|source|catalogo profesional 2026 zoé.pdf|page|17|row|101728|attributes|{\"presentacion\": \"100 ml\"}": {
+      "sku": "ZOE-0029-V01",
+      "sku_producto": "ZOE-0029",
+      "presentation": "100 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 17
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|18|name|hydrafacialapuredetox|bbox|396.847,63.572,748.965,143.272|variant|source|catalogo profesional 2026 zoé.pdf|page|18|row|101829|attributes|{\"presentacion\": \"475 ml\"}": {
+      "sku": "ZOE-0034-V01",
+      "sku_producto": "ZOE-0034",
+      "presentation": "475 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 18
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|19|name|hydrafacialbacnecontrol|bbox|401.547,58.019,743.477,300.252|variant|source|catalogo profesional 2026 zoé.pdf|page|19|row|101930|attributes|{\"presentacion\": \"475 ml\"}": {
+      "sku": "ZOE-0035-V01",
+      "sku_producto": "ZOE-0035",
+      "presentation": "475 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 19
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|20|name|hydrafacialcrepairboost|bbox|387.618,53.945,729.546,315.189|variant|source|catalogo profesional 2026 zoé.pdf|page|20|row|102031|attributes|{\"presentacion\": \"475 ml\"}": {
+      "sku": "ZOE-0036-V01",
+      "sku_producto": "ZOE-0036",
+      "presentation": "475 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 20
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|22|name|emulsiondelimpieza|bbox|389.647,151.425,731.577,300.222|variant|source|catalogo profesional 2026 zoé.pdf|page|22|row|102232|attributes|{\"presentacion\": \"300 ml\"}": {
+      "sku": "ZOE-0021-V01",
+      "sku_producto": "ZOE-0021",
+      "presentation": "300 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 22
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|23|name|espumadelimpieza|bbox|45.393,38.009,658.699,151.501|variant|source|catalogo profesional 2026 zoé.pdf|page|23|row|102333|attributes|{\"presentacion\": \"160 ml\"}": {
+      "sku": "ZOE-0023-V01",
+      "sku_producto": "ZOE-0023",
+      "presentation": "160 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 23
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|24|name|gelscrub|bbox|390.059,155.345,731.99,304.142|variant|source|catalogo profesional 2026 zoé.pdf|page|24|row|102434|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "ZOE-0033-V01",
+      "sku_producto": "ZOE-0033",
+      "presentation": "250 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 24
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|25|name|locionhumectante|bbox|389.647,170.925,731.577,319.722|variant|source|catalogo profesional 2026 zoé.pdf|page|25|row|102535|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0039-V01",
+      "sku_producto": "ZOE-0039",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 25
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|26|name|locionantibacterial|bbox|45.393,38.009,729.548,301.305|variant|source|catalogo profesional 2026 zoé.pdf|page|26|row|102636|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0038-V01",
+      "sku_producto": "ZOE-0038",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 26
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|27|name|locionrefrescante|bbox|45.393,38.009,688.375,150.904|variant|source|catalogo profesional 2026 zoé.pdf|page|27|row|102737|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0042-V01",
+      "sku_producto": "ZOE-0042",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 27
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|28|name|aguamicelar|bbox|45.393,38.009,581.882,150.904|variant|source|catalogo profesional 2026 zoé.pdf|page|28|row|102838|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0012-V01",
+      "sku_producto": "ZOE-0012",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 28
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|29|name|cremareparadorahidratanteureaal10|bbox|45.393,14.222,742.332,293.82|variant|source|catalogo profesional 2026 zoé.pdf|page|29|row|102939|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0020-V01",
+      "sku_producto": "ZOE-0020",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 29
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|29|name|cremareparadorahidratanteureaal10|bbox|45.393,14.222,742.332,293.82|variant|source|catalogo profesional 2026 zoé.pdf|page|29|row|102940|attributes|{\"presentacion\": \"300 ml\"}": {
+      "sku": "ZOE-0020-V02",
+      "sku_producto": "ZOE-0020",
+      "presentation": "300 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 29
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|30|name|emulsiondevitaminacliposomada|bbox|45.393,36.598,680.191,168.774|variant|source|catalogo profesional 2026 zoé.pdf|page|30|row|103041|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0022-V01",
+      "sku_producto": "ZOE-0022",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 30
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|31|name|serumdeacidohialuronicoliposomado|bbox|401.155,163.02,743.081,347.817|variant|source|catalogo profesional 2026 zoé.pdf|page|31|row|103142|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0049-V01",
+      "sku_producto": "ZOE-0049",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 31
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|32|name|pulparegeneradora|bbox|405.0,161.092,746.93,291.889|variant|source|catalogo profesional 2026 zoé.pdf|page|32|row|103243|attributes|{\"presentacion\": \"25 gr\"}": {
+      "sku": "ZOE-0048-V01",
+      "sku_producto": "ZOE-0048",
+      "presentation": "25 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 32
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|33|name|barrareparadoraintensiva|bbox|45.393,31.665,737.529,269.439|variant|source|catalogo profesional 2026 zoé.pdf|page|33|row|103344|attributes|{\"presentacion\": \"15 ml\"}": {
+      "sku": "ZOE-0013-V01",
+      "sku_producto": "ZOE-0013",
+      "presentation": "15 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 33
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|34|name|lipstickmentol|bbox|45.393,38.009,640.809,151.275|variant|source|catalogo profesional 2026 zoé.pdf|page|34|row|103445|attributes|{\"presentacion\": \"5 ml\"}": {
+      "sku": "ZOE-0037-V01",
+      "sku_producto": "ZOE-0037",
+      "presentation": "5 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 34
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|35|name|mascaraantiagecoenzimaq10|bbox|45.393,50.145,792.142,101.668|variant|source|catalogo profesional 2026 zoé.pdf|page|35|row|103546|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "ZOE-0043-V01",
+      "sku_producto": "ZOE-0043",
+      "presentation": "250 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 35
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|36|name|mascaradescongestiva|bbox|401.155,50.903,703.706,144.888|variant|source|catalogo profesional 2026 zoé.pdf|page|36|row|103647|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "ZOE-0045-V01",
+      "sku_producto": "ZOE-0045",
+      "presentation": "250 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 36
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|37|name|mascarasecativa|bbox|45.393,52.027,643.299,146.013|variant|source|catalogo profesional 2026 zoé.pdf|page|37|row|103748|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "ZOE-0047-V01",
+      "sku_producto": "ZOE-0047",
+      "presentation": "250 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 37
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|38|name|mascaradetoxdecarbonactivo|bbox|45.393,54.572,769.821,143.837|variant|source|catalogo profesional 2026 zoé.pdf|page|38|row|103849|attributes|{\"presentacion\": \"250 gr\"}": {
+      "sku": "ZOE-0046-V01",
+      "sku_producto": "ZOE-0046",
+      "presentation": "250 gr",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 38
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|40|name|blendahas|bbox|413.1,830.708,476.616,852.392|variant|source|catalogo profesional 2026 zoé.pdf|page|40|row|104050|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0014-V01",
+      "sku_producto": "ZOE-0014",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 40
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|41|name|acidoglicolico30|bbox|413.1,808.952,476.616,830.636|variant|source|catalogo profesional 2026 zoé.pdf|page|41|row|104151|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0005-V01",
+      "sku_producto": "ZOE-0005",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 41
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|42|name|tca20|bbox|428.308,831.611,491.825,853.295|variant|source|catalogo profesional 2026 zoé.pdf|page|42|row|104252|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0050-V01",
+      "sku_producto": "ZOE-0050",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 42
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|43|name|acidoazelaico20|bbox|428.308,831.611,491.825,853.295|variant|source|catalogo profesional 2026 zoé.pdf|page|43|row|104353|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0002-V01",
+      "sku_producto": "ZOE-0002",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 43
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|44|name|acidosalicilico20|bbox|428.308,831.611,491.825,853.295|variant|source|catalogo profesional 2026 zoé.pdf|page|44|row|104454|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0010-V01",
+      "sku_producto": "ZOE-0010",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 44
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|45|name|acidocitrico5|bbox|428.308,831.611,491.825,853.295|variant|source|catalogo profesional 2026 zoé.pdf|page|45|row|104555|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0003-V01",
+      "sku_producto": "ZOE-0003",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 45
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|46|name|acidofitico5|bbox|428.308,855.539,491.825,877.223|variant|source|catalogo profesional 2026 zoé.pdf|page|46|row|104656|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0004-V01",
+      "sku_producto": "ZOE-0004",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 46
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|47|name|acidomandelico30|bbox|428.345,817.265,491.862,838.949|variant|source|catalogo profesional 2026 zoé.pdf|page|47|row|104757|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0008-V01",
+      "sku_producto": "ZOE-0008",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 47
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|48|name|acidolactico30|bbox|428.345,840.765,491.862,862.449|variant|source|catalogo profesional 2026 zoé.pdf|page|48|row|104858|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0006-V01",
+      "sku_producto": "ZOE-0006",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 48
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|49|name|acidolactobionico20|bbox|428.345,854.239,491.862,875.923|variant|source|catalogo profesional 2026 zoé.pdf|page|49|row|104959|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0007-V01",
+      "sku_producto": "ZOE-0007",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 49
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|50|name|acidoretinoico005|bbox|390.059,73.258,739.332,134.088|variant|source|catalogo profesional 2026 zoé.pdf|page|50|row|105060|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0009-V01",
+      "sku_producto": "ZOE-0009",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 50
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|51|name|acidotranexamico8|bbox|383.722,75.508,744.534,136.338|variant|source|catalogo profesional 2026 zoé.pdf|page|51|row|105161|attributes|{\"presentacion\": \"50 ml\"}": {
+      "sku": "ZOE-0011-V01",
+      "sku_producto": "ZOE-0011",
+      "presentation": "50 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 51
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|52|name|locionneutralizante|bbox|382.918,48.282,717.526,137.989|variant|source|catalogo profesional 2026 zoé.pdf|page|52|row|105262|attributes|{\"presentacion\": \"200 ml\"}": {
+      "sku": "ZOE-0040-V01",
+      "sku_producto": "ZOE-0040",
+      "presentation": "200 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 52
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|53|name|geldespigmentante|bbox|379.054,52.608,657.146,131.45|variant|source|catalogo profesional 2026 zoé.pdf|page|53|row|105363|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0026-V01",
+      "sku_producto": "ZOE-0026",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 53
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|54|name|gelrenovador|bbox|380.569,55.223,567.088,140.898|variant|source|catalogo profesional 2026 zoé.pdf|page|54|row|105464|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0032-V01",
+      "sku_producto": "ZOE-0032",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 54
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|55|name|cremadeacidoretinoico0025|bbox|380.132,60.825,730.251,140.948|variant|source|catalogo profesional 2026 zoé.pdf|page|55|row|105565|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0016-V01",
+      "sku_producto": "ZOE-0016",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 55
+    },
+    "source|catalogo profesional 2026 zoé.pdf|page|56|name|cremadeacidoretinoico005|bbox|380.569,58.907,730.688,141.933|variant|source|catalogo profesional 2026 zoé.pdf|page|56|row|105666|attributes|{\"presentacion\": \"30 ml\"}": {
+      "sku": "ZOE-0017-V01",
+      "sku_producto": "ZOE-0017",
+      "presentation": "30 ml",
+      "source_file": "Catalogo Profesional 2026 ZOÉ.pdf",
+      "source_page": 56
+    }
+  },
+  "schema": "piel-radiante/catalog-sku-map/v1",
+  "source": "piel-radiante-bo",
+  "product_pattern": "{prefix}-{number:04d}",
+  "variant_pattern": "{product_sku}-V{number:02d}",
+  "brand_prefixes": {
+    "Libra": "LIB",
+    "Vital Blue": "VBL",
+    "Rouse Arey": "RAR",
+    "ZO-É": "ZOE"
+  }
+}

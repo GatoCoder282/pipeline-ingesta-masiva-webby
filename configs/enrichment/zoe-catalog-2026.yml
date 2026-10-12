@@ -1,0 +1,331 @@
+source: zoe-catalog-2026
+pdf_file: "Catalogo Profesional 2026 ZOÉ.pdf"
+extraction_jsonl: "data/processed/5ec51ad0-8e7b-4a96-af95-0bc9d47cfa33__productos.jsonl"
+extraction_json: "data/extracted/5ec51ad0-8e7b-4a96-af95-0bc9d47cfa33.json"
+brand: "ZO-É"
+brand_order:
+  - Libra
+  - Vital Blue
+  - Rouse Arey
+  - ZO-É
+
+# The PDF extractor produced page-level evidence, but its generic card parser
+# also saw cover/section text and price labels as cards. These reviewed page and
+# source-row anchors select only the actual product card on each product page.
+products:
+  - page: 4
+    source_row: 5
+    name: "Crema Reductora Corporal Térmica Caliente"
+    category: "Línea corporal > Reducción"
+    variants:
+      - {presentation: "300 ml", price: 95}
+      - {presentation: "500 ml", price: 139}
+      - {presentation: "1000 ml", price: 247}
+  - page: 5
+    source_row: 6
+    name: "Gel Reductor Corporal Quemador de Grasa Localizada"
+    category: "Línea corporal > Reducción"
+    variants:
+      - {presentation: "300 gr", price: 85}
+      - {presentation: "500 gr", price: 125}
+      - {presentation: "1 kg", price: 189}
+      - {presentation: "3,8 kg", price: 575}
+  - page: 6
+    source_row: 7
+    name: "Gel Reafirmante Corporal Criogénico"
+    category: "Línea corporal > Reafirmación"
+    variants:
+      - {presentation: "300 gr", price: 85}
+      - {presentation: "500 gr", price: 125}
+      - {presentation: "1 kg", price: 189}
+      - {presentation: "3,8 kg", price: 575}
+  - page: 7
+    source_row: 9
+    name: "Loción Reafirmante para Vendas Frías"
+    category: "Línea corporal > Reafirmación"
+    variants:
+      - {presentation: "1 lt", price: 126}
+  - page: 8
+    source_row: 10
+    name: "Exfoliante Corporal de Café"
+    category: "Línea corporal > Limpieza"
+    variants:
+      - {presentation: "300 gr", price: 85}
+      - {presentation: "500 gr", price: 135}
+  - page: 9
+    source_row: 12
+    name: "Máscara de Chocolate"
+    category: "Línea corporal > Hidratación"
+    variants:
+      - {presentation: "300 ml", price: 160}
+      - {presentation: "500 ml", price: 250}
+  - page: 10
+    source_row: 13
+    name: "Crema para Masajes Musculares"
+    category: "Línea corporal > Tratamientos"
+    variants:
+      - {presentation: "50 ml", price: 40}
+      - {presentation: "300 ml", price: 95}
+      - {presentation: "500 ml", price: 139}
+      - {presentation: "1000 ml", price: 247}
+  - page: 11
+    source_row: 14
+    name: "Aceites Aromáticos"
+    category: "Línea corporal > Relajación"
+    variants:
+      - {presentation: "200 ml", price: 45}
+  - page: 13
+    source_row: 17
+    name: "Gel Neutro para Electroterapia y Ecografía"
+    category: "Medios físicos"
+    variants:
+      - {presentation: "1 lt", price: 45}
+      - {presentation: "5 lt", price: 160}
+  - page: 14
+    source_row: 18
+    name: "Gel para Cavitación"
+    category: "Medios físicos"
+    variants:
+      - {presentation: "1 lt", price: 62}
+      - {presentation: "5 lt", price: 216}
+  - page: 15
+    source_row: 19
+    name: "Crema Conductora para Diatermia/Tecarterapia"
+    category: "Medios físicos"
+    variants:
+      - {presentation: "1 kg", price: 190}
+  - page: 16
+    source_row: 20
+    name: "Gel Conductor para Radiofrecuencia"
+    category: "Medios físicos"
+    variants:
+      - {presentation: "500 gr", price: 120}
+  - page: 17
+    source_row: 22
+    name: "Gel para Hollywood Peel"
+    category: "Medios físicos"
+    variants:
+      - {presentation: "100 ml", price: 130}
+  - page: 18
+    source_row: 23
+    name: "Hydra Facial A Pure Detox"
+    category: "Medios físicos > Hydra Facial"
+    variants:
+      - {presentation: "475 ml", price: 170}
+  - page: 19
+    source_row: 25
+    name: "Hydra Facial B Acne Control"
+    category: "Medios físicos > Hydra Facial"
+    variants:
+      - {presentation: "475 ml", price: 185}
+  - page: 20
+    source_row: 28
+    name: "Hydra Facial C Repair Boost"
+    category: "Medios físicos > Hydra Facial"
+    variants:
+      - {presentation: "475 ml", price: 155}
+  - page: 22
+    source_row: 32
+    name: "Emulsión de Limpieza"
+    category: "Línea facial > Limpieza"
+    variants:
+      - {presentation: "300 ml", price: 95}
+  - page: 23
+    source_row: 34
+    name: "Espuma de Limpieza"
+    category: "Línea facial > Limpieza"
+    variants:
+      - {presentation: "160 ml", price: 85}
+  - page: 24
+    source_row: 36
+    name: "Gel Scrub"
+    category: "Línea facial > Exfoliación"
+    variants:
+      - {presentation: "250 gr", price: 110}
+  - page: 25
+    source_row: 38
+    name: "Loción Humectante"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "200 ml", price: 90}
+  - page: 26
+    source_row: 40
+    name: "Loción Antibacterial"
+    category: "Línea facial > Desinfección"
+    variants:
+      - {presentation: "200 ml", price: 80}
+  - page: 27
+    source_row: 42
+    name: "Loción Refrescante"
+    category: "Línea facial > Piel sensible"
+    variants:
+      - {presentation: "200 ml", price: 80}
+  - page: 28
+    source_row: 45
+    name: "Agua Micelar"
+    category: "Línea facial > Limpieza"
+    variants:
+      - {presentation: "200 ml", price: 65}
+  - page: 29
+    source_row: 47
+    name: "Crema Reparadora Hidratante Urea al 10%"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "50 ml", price: 35}
+      - {presentation: "300 ml", price: 115}
+  - page: 30
+    source_row: 50
+    name: "Emulsión de Vitamina C Liposomada"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "30 ml", price: 130}
+  - page: 31
+    source_row: 51
+    name: "Sérum de Ácido Hialurónico Liposomado"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "30 ml", price: 130}
+  - page: 32
+    source_row: 52
+    name: "Pulpa Regeneradora"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "25 gr", price: 49}
+  - page: 33
+    source_row: 53
+    name: "Barra Reparadora Intensiva"
+    category: "Línea facial > Reparación"
+    variants:
+      - {presentation: "15 ml", price: 45}
+  - page: 34
+    source_row: 56
+    name: "Lipstick Mentol"
+    category: "Línea facial > Hidratación"
+    variants:
+      - {presentation: "5 ml", price: 25}
+  - page: 35
+    source_row: 59
+    name: "Máscara Antiage Coenzima Q10"
+    category: "Línea facial > Máscaras"
+    variants:
+      - {presentation: "250 gr", price: 110}
+  - page: 36
+    source_row: 60
+    name: "Máscara Descongestiva"
+    category: "Línea facial > Máscaras"
+    variants:
+      - {presentation: "250 gr", price: 130}
+  - page: 37
+    source_row: 61
+    name: "Máscara Secativa"
+    category: "Línea facial > Máscaras"
+    variants:
+      - {presentation: "250 gr", price: 110}
+  - page: 38
+    source_row: 62
+    name: "Máscara Detox de Carbón Activo"
+    category: "Línea facial > Máscaras"
+    variants:
+      - {presentation: "250 gr", price: 110}
+  - page: 40
+    source_row: 64
+    name: "Blend AHA's"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 264}
+  - page: 41
+    source_row: 65
+    name: "Ácido Glicólico 30%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 210}
+  - page: 42
+    source_row: 66
+    name: "TCA 20%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 170}
+  - page: 43
+    source_row: 67
+    name: "Ácido Azelaico 20%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 190}
+  - page: 44
+    source_row: 68
+    name: "Ácido Salicílico 20%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 210}
+  - page: 45
+    source_row: 69
+    name: "Ácido Cítrico 5%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 160}
+  - page: 46
+    source_row: 70
+    name: "Ácido Fítico 5%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 170}
+  - page: 47
+    source_row: 71
+    name: "Ácido Mandélico 30%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 210}
+  - page: 48
+    source_row: 72
+    name: "Ácido Láctico 30%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 160}
+  - page: 49
+    source_row: 73
+    name: "Ácido Lactobiónico 20%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 160}
+  - page: 50
+    source_row: 74
+    name: "Ácido Retinóico 0.05%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 160}
+  - page: 51
+    source_row: 75
+    name: "Ácido Tranexámico 8%"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "50 ml", price: 140}
+  - page: 52
+    source_row: 76
+    name: "Loción Neutralizante"
+    category: "Peelings químicos > Facial"
+    variants:
+      - {presentation: "200 ml", price: 150}
+  - page: 53
+    source_row: 77
+    name: "Gel Despigmentante"
+    category: "Domiciliario > Facial"
+    variants:
+      - {presentation: "30 ml", price: 165}
+  - page: 54
+    source_row: 79
+    name: "Gel Renovador"
+    category: "Domiciliario > Facial"
+    variants:
+      - {presentation: "30 ml", price: 145}
+  - page: 55
+    source_row: 80
+    name: "Crema de Ácido Retinóico 0.025%"
+    category: "Domiciliario > Facial"
+    variants:
+      - {presentation: "30 ml", price: 95}
+  - page: 56
+    source_row: 82
+    name: "Crema de Ácido Retinóico 0.05%"
+    category: "Domiciliario > Facial"
+    variants:
+      - {presentation: "30 ml", price: 95}

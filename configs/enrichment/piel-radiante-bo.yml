@@ -1,0 +1,153 @@
+source: piel-radiante-bo
+
+# The source catalog identifies the remaining products as Rouse Arey.  These
+# prefixes are evidence rules for the images/PDFs already ingested in ITER-001.
+default_brand: Rouse Arey
+brand_order:
+  - Libra
+  - Vital Blue
+  - Rouse Arey
+  - ZO-É
+source_prefixes:
+  Libra:
+    - "Hoja de producto"
+    - "hoja de producto"
+    - "WhatsApp Image 2026-08-31 at 19.44.07"
+    - "WhatsApp Image 2026-08-31 at 19.44.08"
+    - "WhatsApp Image 2026-08-31 at 19.44.09"
+    - "WhatsApp Image 2026-08-31 at 19.44.10"
+    - "WhatsApp Image 2026-08-31 at 19.44.11"
+    - "WhatsApp Image 2026-08-31 at 19.44.12"
+    - "WhatsApp Image 2026-08-31 at 19.44.13"
+  Vital Blue:
+    - "WhatsApp Image 2026-08-31 at 19.44.14"
+    - "WhatsApp Image 2026-08-31 at 19.44.15"
+    - "WhatsApp Image 2026-08-31 at 19.44.16"
+  ZO-É:
+    - "Catalogo Profesional 2026 ZOÉ.pdf"
+
+documents:
+  - file: "precios libra agosto 2026.docx"
+    brand: Libra
+  - file: "precios vital blue.docx"
+    brand: Vital Blue
+
+# The price-list names are abbreviated and sometimes misspelled.  Only these
+# reviewed aliases may enrich a catalog row; unmatched names stay in the report.
+aliases:
+  Libra:
+    "Crema age firming 50g": "Age & Firming Suppo"
+    "Booster calming": "Therapy N°1 Calming"
+    "Niacinamida": "Therapy N°8 Niacinamide 10 + ZN"
+    "Colágeno": "Therapy N°4 Colágeno"
+    "Acido hialuronico": "Therapy N°3 Acido Hialuronico"
+    "Retinol": "Therapy N°2 Retinol"
+    "Instand lift": "Therapy N°5 Instant Lift"
+    "Vitamina c": "Therapy N°6 C Vitamin"
+    "Be White": "Therapy N°7 BE White"
+    "Cica boost": "Therapy N°10 CICABOOST"
+    "Hyalub5": "Therapy N°9 HYALUB5"
+    "Vtic y reservatrol": "Booster N°12"
+    "Gel mask multi 500g": "Gel Multi Mask C"
+    "Gel mask multi 250g": "Gel Multi Mask C"
+    "Masc. Hidratante 500": "Máscara Hidratante"
+    "Masc.hidratante250": "Máscara Hidratante"
+    "Masc. Exfoleante aha 500": "Máscara Peeling Blend"
+    "Masc. Exfoleante aha 250": "Máscara Peeling Blend"
+    "Masc. regeneradora 500": "Máscara Regeneradora"
+    "Masc.regeneradora250": "Máscara Regeneradora"
+    "Masc.iluminadora500": "Máscara Iluminadora"
+    "Masc.iluminadora250": "Máscara Iluminadora"
+    "Masc. ultra nutritiva500": "Máscara Ultra Nutritiva"
+    "Masc. ultra nutritiva250": "Máscara Ultra Nutritiva"
+    "Masc.purificante500": "Mascara Purificante"
+    "Masc.purificante250": "Mascara Purificante"
+    "Masc. reafirmante 500": "Máscara Reafirmante"
+    "Masc. reafirmante 250": "Máscara Reafirmante"
+    "Crema hidra protec250": "Hidra Esotegt"
+    "Crema hidra protec50": "Hidra Esotegt"
+    "Crema nutriprotec 50": "Nutri-Protect Suppo"
+    "Gel limpieza piel mixta 500": "Gel de Limpieza Facial"
+    "Gel limpieza piel mixta 200": "Gel de Limpieza Facial"
+    "Gel de limpieza piel sensible 500": "Gel de Limpieza"
+    "Gel limpieza piel sensible 200": "Gel de Limpieza"
+    "Gel de limpieza sebo control 500": "Gel de Limpieza Control Sebo"
+    "Gel limpieza cebo control 200": "Gel de Limpieza Control Sebo"
+    "Aceite de limpieza": "Aceite de Limpieza"
+    "Emulsion exfoleante facial 500": "Emulsión Exfoliante Facial"
+    "Emulsion exfoleante facial 250": "Emulsión Exfoliante Facial"
+    "Emulsion de limpieza facial 250": "Emulsión de Limpieza Facial"
+    "Loción salicílico500": "Loción Ácido Salicílico"
+    "Loción salicílico250": "Loción Ácido Salicílico"
+    "Loción hidratante 500": "Loción Hidratante"
+    "Loción hidratante250": "Loción Hidratante"
+    "Loción antibacterial 250": "Loción Antibacterial"
+    "Loción descongestiva 500": "Loción Descongestiva"
+    "Locion descogestiva250": "Loción Descongestiva"
+  Vital Blue:
+    "Joaco pure": "Aclarante de Ojeras Pigmentadas - Unificador"
+    "Calm + extreme": "Máscara Calmante"
+    "Alma Berry": "Máscara Gel, Hidratante y Tensora"
+    "Syneergy peel 3.5": "Mascara — Exfoliación y Regeneración Intensivas"
+    "TRIABE": "Triabe Booster"
+    "TRIPAP": "Tripab Booster"
+    "TRIGAC": "Trigac Booster"
+    "TRIANA": "Triana Booster"
+    "CARESUN": "Caresun"
+
+# Corrections supported by the source title/evidence or unambiguous Spanish
+# orthography.  No description text is rewritten semantically in this pass.
+name_overrides:
+  "Mascara Purificante": "Máscara Purificante"
+  "Therapy N°3 Acido Hialuronico": "Therapy N°3 Ácido Hialurónico"
+  "Mascara — Exfoliación y Regeneración Intensivas": "Synergy Peel 3.5"
+  "Máscara Gel, Hidratante y Tensora": "Alma Berry"
+  "Máscara Calmante": "Calm+ Extreme"
+  "Aclarante de Ojeras Pigmentadas - Unificador": "Joaco Pure"
+
+# Category completion is conservative: source categories are kept when
+# present, explicit overrides correct reviewed mismatches, and these rules
+# fill only blank values using the product family visible in the title.
+category_overrides:
+  "Synergy Peel 3.5": "Peelings químicos > Facial"
+
+category_rules:
+  - {contains: "therapy n", category: "Línea de booster"}
+  - {contains: "booster n", category: "Línea de booster"}
+  - {contains: "booster", category: "Línea de booster"}
+  - {contains: "mascara", category: "Línea facial > Máscaras"}
+  - {contains: "tensor de colageno", category: "Línea facial > Máscaras"}
+  - {contains: "gel multi mask", category: "Línea facial > Máscaras"}
+  - {contains: "peel", category: "Peelings químicos > Facial"}
+  - {contains: "gel exfoliante", category: "Línea facial > Exfoliación"}
+  - {contains: "keratolytic", category: "Línea facial > Exfoliación"}
+  - {contains: "aceite de limpieza", category: "Línea facial > Limpieza"}
+  - {contains: "emulsion de limpieza", category: "Línea facial > Limpieza"}
+  - {contains: "gel de limpieza", category: "Línea facial > Limpieza"}
+  - {contains: "jabon", category: "Línea facial > Limpieza"}
+  - {contains: "tonico", category: "Línea facial > Lociones"}
+  - {contains: "locion", category: "Línea facial > Lociones"}
+  - {contains: "oleo", category: "Óleos"}
+  - {contains: "gel termico", category: "Geles corporales"}
+  - {contains: "gel descongestivo", category: "Geles corporales"}
+  - {contains: "age firming", category: "Línea facial > Cremas"}
+  - {contains: "hidra esotegt", category: "Línea facial > Cremas"}
+  - {contains: "nutri protect", category: "Línea facial > Cremas"}
+  - {contains: "caresun", category: "Línea facial > Protección solar"}
+  - {contains: "hydra", category: "Línea facial > Hidratación"}
+  - {contains: "alma berry", category: "Línea facial > Hidratación"}
+  - {contains: "remove extrem", category: "Línea facial > Tratamientos"}
+  - {contains: "secative", category: "Línea facial > Tratamientos"}
+  - {contains: "serum", category: "Línea facial > Tratamientos"}
+  - {contains: "acido hialuronico", category: "Línea facial > Tratamientos"}
+  - {contains: "dmae", category: "Línea facial > Tratamientos"}
+  - {contains: "exos", category: "Línea facial > Tratamientos"}
+  - {contains: "pdrn", category: "Línea facial > Tratamientos"}
+  - {contains: "pert", category: "Línea facial > Tratamientos"}
+  - {contains: "peptona", category: "Línea facial > Tratamientos"}
+
+category_defaults:
+  Libra: "Línea facial > Tratamientos"
+  Vital Blue: "Línea facial > Tratamientos"
+  Rouse Arey: "Línea facial > Tratamientos"
+category_default: "Línea facial > Tratamientos"

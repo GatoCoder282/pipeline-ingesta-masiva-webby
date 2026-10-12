@@ -1,0 +1,3 @@
+interface:
+  display_name: "Catalog Iteration Enrichment"
+  short_description: "Enrich catalogs from price lists with evidence"

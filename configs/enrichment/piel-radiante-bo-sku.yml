@@ -1,0 +1,12 @@
+source: piel-radiante-bo
+
+# Opción 1: SKU corto, legible y estable. La presentación no forma parte del
+# SKU; permanece en atributos.presentacion para evitar cambios de identidad.
+product_pattern: "{prefix}-{number:04d}"
+variant_pattern: "{product_sku}-V{number:02d}"
+
+brand_prefixes:
+  Libra: LIB
+  Vital Blue: VBL
+  Rouse Arey: RAR
+  ZO-É: ZOE
