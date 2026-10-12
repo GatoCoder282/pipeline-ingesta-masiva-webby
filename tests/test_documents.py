@@ -2,8 +2,11 @@ from pathlib import Path
 
 from ingestion_pipeline.config import DocumentConfig
 from ingestion_pipeline.documents.catalog import extract_catalog
+from ingestion_pipeline.documents.extractors import _paddle_items
 from ingestion_pipeline.documents.markdown import extraction_to_markdown, page_markdown_lines
 from ingestion_pipeline.documents.models import DocumentPage, ExtractedBlock, ExtractionResult
+from ingestion_pipeline.documents.quality import assess_description
+from ingestion_pipeline.documents.review import write_description_review_html
 
 
 def _document(*blocks: ExtractedBlock) -> ExtractionResult:
@@ -127,7 +130,7 @@ def test_catalog_extraction_separates_normalized_name_and_description() -> None:
 def test_document_config_loads_tenant_profile(tmp_path: Path) -> None:
     path = tmp_path / "document.yml"
     path.write_text(
-        "source: test\nocr:\n  language: spa\n  dpi: 200\nlayout:\n  columns: 2\n",
+        "source: test\nocr:\n  language: spa\n  engine: auto\n  runtime: cpu\n  dpi: 200\nlayout:\n  columns: 2\nquality:\n  gate: true\n  strict_visual: true\n  noise_tokens: [ocrojojo]\n",
         encoding="utf-8",
     )
 
@@ -136,3 +139,121 @@ def test_document_config_loads_tenant_profile(tmp_path: Path) -> None:
     assert config.source == "test"
     assert config.ocr_language == "spa"
     assert config.columns == 2
+    assert config.ocr_engine == "auto"
+    assert config.quality_gate is True
+    assert config.description_noise_tokens == ("ocrojojo",)
+
+
+def test_catalog_reconstructs_parallel_columns_before_normalization() -> None:
+    result = extract_catalog(
+        _document(
+            ExtractedBlock("title", 1, "Aceite de Limpieza", (100, 10, 450, 40), 0.95),
+            ExtractedBlock(
+                "left1",
+                1,
+                "Nuestro aceite limpia, suaviza y protege la piel.",
+                (70, 90, 500, 112),
+                0.95,
+            ),
+            ExtractedBlock("left2", 1, "¿Por qué elegirlo?", (70, 140, 400, 162), 0.95),
+            ExtractedBlock(
+                "left3",
+                1,
+                "Contiene aceites cuidadosamente seleccionados.",
+                (70, 170, 500, 192),
+                0.95,
+            ),
+            ExtractedBlock("right1", 1, "¿Cómo se utiliza?", (560, 95, 900, 117), 0.95),
+            ExtractedBlock(
+                "right2",
+                1,
+                "Aplica la cantidad necesaria sobre el rostro seco.",
+                (560, 130, 980, 152),
+                0.95,
+            ),
+            ExtractedBlock(
+                "right3", 1, "Retira con abundante agua templada.", (560, 165, 900, 187), 0.95
+            ),
+            ExtractedBlock("badge", 1, "FRAGANCE FREE", (70, 220, 300, 238), 0.95),
+        ),
+        run_id="run-columns",
+        config=DocumentConfig(quality_gate=True, strict_visual=True),
+    )
+
+    description = result.products[0].data["descripcion"]
+    assert description.index("Nuestro") < description.index("¿Cómo")
+    assert "FRAGANCE" not in description
+    assert "\n\n" in description
+    assert result.products[0].source["field_evidence"]["descripcion_quality"]["status"] == "pass"
+
+
+def test_catalog_reads_lower_callout_columns_without_interleaving() -> None:
+    result = extract_catalog(
+        _document(
+            ExtractedBlock("title", 1, "Máscara Iluminadora", (320, 110, 520, 180), 0.95),
+            ExtractedBlock("body", 1, "Descripción principal legible.", (75, 330, 300, 345), 0.95),
+            ExtractedBlock("warning", 1, "ADVERTENCIAS:", (75, 700, 150, 715), 0.95),
+            ExtractedBlock("warning-text", 1, "Uso externo.", (75, 725, 150, 740), 0.95),
+            ExtractedBlock("sensitivity", 1, "SENSIBILIDAD:", (210, 700, 300, 715), 0.95),
+            ExtractedBlock(
+                "sensitivity-text", 1, "Suspender si irrita.", (210, 725, 320, 740), 0.95
+            ),
+            ExtractedBlock("solar", 1, "PROTECCIÓN SOLAR:", (345, 700, 450, 715), 0.95),
+            ExtractedBlock("solar-text", 1, "Usar protector.", (345, 725, 460, 740), 0.95),
+            ExtractedBlock("storage", 1, "GUARDADO:", (480, 700, 550, 715), 0.95),
+            ExtractedBlock("storage-text", 1, "Lugar fresco.", (480, 725, 570, 740), 0.95),
+        ),
+        run_id="run-footer-columns",
+        config=DocumentConfig(quality_gate=True, strict_visual=True),
+    )
+
+    description = result.products[0].data["descripcion"]
+    assert description.index("Uso externo") < description.index("Suspender")
+    assert description.index("Suspender") < description.index("Usar protector")
+    assert description.index("Usar protector") < description.index("Lugar fresco")
+    assert "Usar protector Suspender" not in description
+
+
+def test_paddle_result_parser_supports_v3_and_legacy_shapes() -> None:
+    modern = _paddle_items(
+        {
+            "res": {
+                "rec_texts": ["Crema", "Hidratante"],
+                "rec_scores": [0.98, 96],
+                "rec_boxes": [[1, 2, 30, 12], [[40, 2], [90, 2], [90, 12], [40, 12]]],
+            }
+        }
+    )
+    legacy = _paddle_items([[[[1, 2], [30, 2], [30, 12], [1, 12]], ("Crema", 0.9)]])
+
+    assert modern[0][0] == "Crema"
+    assert modern[1][1] == (40.0, 2.0, 90.0, 12.0)
+    assert modern[1][2] == 0.96
+    assert legacy[0][0] == "Crema"
+
+
+def test_description_quality_flags_ocr_noise() -> None:
+    quality = assess_description("Texto legible. FREE FREE ocrojojo", engine="tesseract")
+
+    assert quality.status == "reconstruct"
+    assert "ocr_noise_tokens" in quality.flags
+
+
+def test_description_review_is_sorted_by_brand(tmp_path: Path) -> None:
+    products = tmp_path / "productos.csv"
+    products.write_text(
+        "marca,nombre,descripcion\nRouse Arey,Zeta,Texto legible.\nLibra,Alpha,Otra descripción.\n",
+        encoding="utf-8",
+    )
+    report = tmp_path / "report.json"
+    report.write_text(
+        '{"product_quality":{"descriptions":{"items":[{"row_number":2,"status":"pass"},{"row_number":3,"status":"pass"}]}}}',
+        encoding="utf-8",
+    )
+    output = tmp_path / "review.html"
+
+    result = write_description_review_html(products, report, output)
+
+    content = output.read_text(encoding="utf-8")
+    assert result["rows"] == 2
+    assert content.index("Libra") < content.index("Rouse Arey")

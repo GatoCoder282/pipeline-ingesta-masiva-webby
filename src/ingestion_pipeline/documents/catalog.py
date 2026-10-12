@@ -17,9 +17,14 @@ from statistics import median
 from ingestion_pipeline.config import DocumentConfig
 from ingestion_pipeline.documents.markdown import page_markdown_lines, repair_mojibake
 from ingestion_pipeline.documents.models import DocumentPage, ExtractionResult
+from ingestion_pipeline.documents.quality import assess_description
 from ingestion_pipeline.domain.catalog import FieldDefinition, fields_for
 from ingestion_pipeline.domain.models import NormalizedRecord, ValidationIssue
-from ingestion_pipeline.normalization.mapping import coerce_value
+from ingestion_pipeline.normalization.mapping import (
+    coerce_value,
+    normalize_attribute_key,
+    normalize_attributes,
+)
 
 
 @dataclass(frozen=True)
@@ -49,6 +54,7 @@ class CatalogExtraction:
     variant_issues: tuple[ValidationIssue, ...] = ()
     warnings: tuple[str, ...] = ()
     unparsed_cards: tuple[dict[str, object], ...] = ()
+    description_quality: tuple[dict[str, object], ...] = ()
 
 
 _SKU_RE = re.compile(
@@ -178,6 +184,46 @@ def _is_single_page_card(lines: list[_Line]) -> bool:
     return not has_explicit_marker and (_title_anchor_count(lines) == 1 or presentation_count == 1)
 
 
+def _has_parallel_columns(lines: list[_Line]) -> bool:
+    """Detect two text columns without mistaking a full-width title for one."""
+    positioned = [line for line in lines if line.bbox]
+    if len(positioned) < 6:
+        return False
+    span = max(line.bbox[2] for line in positioned) - min(line.bbox[0] for line in positioned)
+    if span <= 0:
+        return False
+    candidates = [line for line in positioned if line.bbox[2] - line.bbox[0] <= span * 0.72]
+    if len(candidates) < 6:
+        return False
+    positions = sorted(line.bbox[0] for line in candidates)
+    gaps = [(positions[index + 1] - positions[index], index) for index in range(len(positions) - 1)]
+    gap, split = max(gaps, default=(0.0, 0))
+    if gap < max(35.0, span * 0.08):
+        return False
+    left = [line for line in candidates if line.bbox[0] <= positions[split]]
+    right = [line for line in candidates if line.bbox[0] >= positions[split + 1]]
+    if len(left) < 3 or len(right) < 3:
+        return False
+    left_top, left_bottom = min(line.top for line in left), max(line.bottom for line in left)
+    right_top, right_bottom = min(line.top for line in right), max(line.bottom for line in right)
+    overlap = min(left_bottom, right_bottom) - max(left_top, right_top)
+    return overlap >= min(left_bottom - left_top, right_bottom - right_top) * 0.25
+
+
+def _column_split_x(lines: list[_Line]) -> float | None:
+    positioned = [line for line in lines if line.bbox]
+    if len(positioned) < 2:
+        return None
+    span = max(line.bbox[2] for line in positioned) - min(line.bbox[0] for line in positioned)
+    candidates = [line for line in positioned if line.bbox[2] - line.bbox[0] <= span * 0.72]
+    positions = sorted(line.bbox[0] for line in candidates)
+    gaps = [(positions[index + 1] - positions[index], index) for index in range(len(positions) - 1)]
+    gap, split = max(gaps, default=(0.0, 0))
+    if gap < max(35.0, span * 0.08):
+        return None
+    return (positions[split] + positions[split + 1]) / 2
+
+
 def _presentation_match(text: str) -> re.Match[str] | None:
     match = _PRESENTATION_RE.match(text)
     if match:
@@ -303,7 +349,13 @@ def _number(value: str) -> Decimal | None:
 
 
 def _attributes(text: str) -> dict[str, str] | None:
-    pairs = _ATTRIBUTE_PAIR_RE.findall(text)
+    raw_text = text
+    try:
+        if raw_text.strip().startswith("{"):
+            return normalize_attributes(raw_text)
+    except ValueError:
+        return None
+    pairs = _ATTRIBUTE_PAIR_RE.findall(raw_text)
     if not pairs:
         return None
     excluded = {
@@ -319,12 +371,18 @@ def _attributes(text: str) -> dict[str, str] | None:
         "variacion",
         "opciones",
     }
-    result = {
-        key.strip(): value.strip()
-        for key, value in pairs
-        if key.strip().lower() not in excluded and value.strip()
-    }
-    return result or None
+    result: dict[str, str] = {}
+    for key, value in pairs:
+        if key.strip().lower() in excluded or not value.strip():
+            continue
+        normalized_key = normalize_attribute_key(key)
+        if normalized_key in result:
+            return None
+        result[normalized_key] = value.strip()
+    try:
+        return normalize_attributes(result)
+    except ValueError:
+        return None
 
 
 def _field_definitions(entity: str) -> dict[str, FieldDefinition]:
@@ -602,10 +660,19 @@ def extract_catalog(
     variant_issues: list[ValidationIssue] = []
     unparsed: list[dict[str, object]] = []
     warnings: list[str] = []
+    description_quality: list[dict[str, object]] = []
     for card_index, card in enumerate(cards, start=2):
         variant_candidates = _variant_candidates(card)
         name = _find_name(card)
         description, description_lines = _find_description(card, name)
+        quality = assess_description(
+            description,
+            engine=extraction.engine.rsplit("+", 1)[-1],
+            layout_reconstructed=bool(description_lines),
+            strict_visual=config.strict_visual,
+            min_chars=config.min_description_chars,
+            noise_tokens=config.description_noise_tokens,
+        )
         raw_product: dict[str, object] = {
             "sku": (
                 _SKU_RE.search(" ".join(line.text for line in card)).group(1)
@@ -624,7 +691,17 @@ def extract_catalog(
         source["field_evidence"] = {
             "nombre": _field_evidence(name_lines, name),
             "descripcion": _field_evidence(description_lines, description),
+            "descripcion_quality": quality.as_json(),
         }
+        source["description_quality"] = quality.as_json()
+        description_quality.append(
+            {
+                "row_number": card_index,
+                "nombre": _normalize_name(name),
+                "source_file": extraction.source_file,
+                **quality.as_json(),
+            }
+        )
         product, product_coercion_issues = _coerce_candidate(
             raw=raw_product,
             entity="productos",
@@ -660,6 +737,17 @@ def extract_catalog(
                 }
             )
 
+        if config.quality_gate and quality.status != "pass":
+            issue = ValidationIssue(
+                card_index,
+                "description_quality",
+                f"Descripción clasificada como {quality.status}: "
+                f"{', '.join(quality.flags) or 'sin estructura validable'}.",
+                field="descripcion",
+            )
+            issues.append(issue)
+            product_issues.append(issue)
+
         for variant_index, (raw_variant, line) in enumerate(variant_candidates):
             raw_variant["sku_producto"] = raw_product["sku"]
             variant_source = dict(source)
@@ -683,6 +771,7 @@ def extract_catalog(
         variant_issues=tuple(variant_issues),
         warnings=tuple(warnings),
         unparsed_cards=tuple(unparsed),
+        description_quality=tuple(description_quality),
     )
 
 
@@ -1128,6 +1217,8 @@ def _select_name(lines: list[_Line]) -> tuple[str | None, int | None, int | None
             score -= 20
         if description_index is not None and index > description_index:
             score -= 15
+        if any(_description_heading(item.text) for item in lines[:index]):
+            score -= 20
         if index == 0:
             score -= 1
         candidates.append((score, height, -index, -end, grouped))
@@ -1150,16 +1241,13 @@ def _has_previous_title_line(lines: list[_Line], index: int) -> bool:
         gap = current.top - previous.bottom
         if gap > 55:
             break
-        if (
-            abs(current.bbox[0] - previous.bbox[0]) <= 80
-            and (
-                _looks_like_visual_title(previous)
-                or (
-                    previous.bbox[3] - previous.bbox[1] >= 22
-                    and len(previous.text.strip()) <= 25
-                    and not _starts_like_name_body(previous.text)
-                    and not previous.text.rstrip().endswith((".", ",", ":"))
-                )
+        if abs(current.bbox[0] - previous.bbox[0]) <= 80 and (
+            _looks_like_visual_title(previous)
+            or (
+                previous.bbox[3] - previous.bbox[1] >= 22
+                and len(previous.text.strip()) <= 25
+                and not _starts_like_name_body(previous.text)
+                and not previous.text.rstrip().endswith((".", ",", ":"))
             )
         ):
             return True
@@ -1211,13 +1299,206 @@ def _is_description_line(line: _Line, *, name: str | None, title_range: tuple[in
         return False
     if _PRESENTATION_RE.match(text) or _SKU_RE.search(text) or _PRICE_RE.search(text):
         return False
-    if folded == _fold_catalog_text(name or ""):
-        return False
     if title_range[0] <= 0 and title_range[1] >= 0 and _looks_like_visual_title(line):
         return False
     if len(text) < 3:
         return False
+    if _is_ocr_decoration(text):
+        return False
     return True
+
+
+_OCR_DECORATION = {
+    "aono",
+    "ocrojojo",
+    "ojsjojo",
+    "fragance",
+    "mineral",
+    "cruelty",
+    "paraben free",
+    "oil free",
+    "free",
+    "ree ree",
+    "ree",
+    "libra",
+    "aceite de",
+    "limpieza",
+    "profunda",
+    "vaneue",
+    "+ informacion",
+    "+ información",
+    "odo tipo de piel",
+    "todo tipo de piel",
+}
+
+
+def _is_ocr_decoration(text: str) -> bool:
+    folded = " ".join(_fold_catalog_text(text).split()).strip(" -:;,.!")
+    if folded in _OCR_DECORATION:
+        return True
+    words = folded.split()
+    if len(words) == 2 and words[0] == words[1] and len(words[0]) <= 8:
+        return True
+    badge_words = set(words)
+    return bool(badge_words) and badge_words <= {
+        "fragrance",
+        "fragance",
+        "mineral",
+        "cruelty",
+        "paraben",
+        "free",
+        "oil",
+        "alcohol",
+    }
+
+
+def _description_heading(text: str) -> bool:
+    folded = _fold_catalog_text(text).strip().lstrip("¿¡?!.�- ")
+    if folded.startswith(
+        (
+            "por que ",
+            "como se ",
+            "como utilizar",
+            "modo de uso",
+            "modo de aplicacion",
+            "ingredientes",
+            "activos",
+            "tipo de piel",
+            "presentacion",
+            "caracteristicas",
+            "indicaciones",
+            "beneficios",
+            "sugerencia de uso",
+            "guardado",
+        )
+    ):
+        return True
+    return bool(re.match(r"(?i)^(?:aceite|extracto|vitamina|polifenoles)\b[^:]{0,70}:", text))
+
+
+def _footer_columns(lines: list[_Line]) -> list[_Line] | None:
+    """Return lower multi-column callouts in visual reading order.
+
+    Several Libra sheets place four labelled callouts (for example
+    ``Advertencias``, ``Sensibilidad`` and ``Guardado``) along the bottom.
+    Sorting those blocks only by ``y`` interleaves the columns and produces
+    sentences such as ``Guardar en un ... signos de irritación``. Detect the
+    lower band geometrically and read each column top-to-bottom.
+    """
+    positioned = [line for line in lines if line.bbox]
+    if len(positioned) < 8:
+        return None
+    minimum = min(line.top for line in positioned)
+    maximum = max(line.top for line in positioned)
+    footer_start = maximum - max(80.0, (maximum - minimum) * 0.18)
+    footer = [line for line in positioned if line.top >= footer_start]
+    if len(footer) < 6:
+        return None
+    positions = sorted({line.bbox[0] for line in footer if line.bbox})
+    if len(positions) < 3:
+        return None
+    span = positions[-1] - positions[0]
+    if span <= 0:
+        return None
+    gap_threshold = max(45.0, span * 0.12)
+    clusters: list[list[float]] = [[positions[0]]]
+    for position in positions[1:]:
+        if position - clusters[-1][-1] > gap_threshold:
+            clusters.append([position])
+        else:
+            clusters[-1].append(position)
+    if len(clusters) < 3:
+        return None
+    starts = [cluster[0] for cluster in clusters]
+    grouped: list[list[_Line]] = [[] for _ in starts]
+    for line in footer:
+        index = min(range(len(starts)), key=lambda item: abs(line.bbox[0] - starts[item]))
+        grouped[index].append(line)
+    if any(len(group) < 2 for group in grouped):
+        return None
+    ordered: list[_Line] = []
+    for group in grouped:
+        ordered.extend(sorted(group, key=lambda line: (line.top, line.bbox[0])))
+    return ordered
+
+
+def _description_body_order(lines: list[_Line]) -> list[_Line]:
+    if not lines:
+        return []
+    if not _has_parallel_columns(lines):
+        return sorted(lines, key=lambda line: (line.top, line.bbox[0] if line.bbox else 0))
+    split_x = _column_split_x(lines)
+    if split_x is None:
+        return sorted(lines, key=lambda line: (line.top, line.bbox[0] if line.bbox else 0))
+    left = [line for line in lines if not line.bbox or line.bbox[0] <= split_x]
+    right = [line for line in lines if line.bbox and line.bbox[0] > split_x]
+    left.sort(key=lambda line: (line.top, line.bbox[0] if line.bbox else 0))
+    right.sort(key=lambda line: (line.top, line.bbox[0] if line.bbox else 0))
+    # Designed sheets commonly place the short product summary at the top of
+    # the right column, followed by the long explanation on the left and the
+    # ingredients/use blocks on the right. Preserve that visual sequence.
+    first_left_top = min((line.top for line in left), default=0.0)
+    early_right = [line for line in right if line.top < first_left_top]
+    late_right = [line for line in right if line.top >= first_left_top]
+    return early_right + left + late_right
+
+
+def _description_order(lines: list[_Line]) -> list[_Line]:
+    """Read body columns and lower callout columns without interleaving them."""
+    if not lines:
+        return []
+    footer = _footer_columns(lines)
+    if footer is None:
+        return _description_body_order(lines)
+    footer_ids = {id(line) for line in footer}
+    body = [line for line in lines if id(line) not in footer_ids]
+    return _description_body_order(body) + footer
+
+
+def _description_text(lines: list[_Line]) -> str:
+    ordered = _description_order(lines)
+    if not ordered:
+        return ""
+    heights = [line.bottom - line.top for line in ordered if line.bbox and line.bottom > line.top]
+    line_height = median(heights) if heights else 12.0
+    footer_threshold = max((line.top for line in ordered), default=0.0) - max(
+        80.0,
+        (
+            max((line.top for line in ordered), default=0.0)
+            - min((line.top for line in ordered), default=0.0)
+        )
+        * 0.18,
+    )
+    paragraphs: list[str] = []
+    current: list[str] = []
+    previous: _Line | None = None
+    for line in ordered:
+        gap = line.top - previous.bottom if previous and line.bbox and previous.bbox else 0
+        starts_section = _description_heading(line.text)
+        footer_column_reset = bool(
+            current
+            and previous
+            and line.bbox
+            and previous.bbox
+            and line.top < previous.top - line_height
+            and line.top >= footer_threshold
+        )
+        separated = bool(current) and (
+            gap > max(12.0, line_height * 1.45) or starts_section or footer_column_reset
+        )
+        if separated:
+            paragraphs.append(" ".join(current))
+            current = []
+        current.append(line.text.strip())
+        previous = line
+    if current:
+        paragraphs.append(" ".join(current))
+    value = "\n\n".join(paragraph for paragraph in paragraphs if paragraph)
+    # Keep the catalog meaning while repairing the common OCR line-break hyphen.
+    value = re.sub(r"(?<=\w)-\s+(?=[a-záéíóúñ])", "", value, flags=re.IGNORECASE)
+    from ingestion_pipeline.enrichment import normalize_description
+
+    return normalize_description(value)
 
 
 def _find_description(lines: list[_Line], name: str | None) -> tuple[str | None, list[_Line]]:
@@ -1248,7 +1529,8 @@ def _find_description(lines: list[_Line], name: str | None) -> tuple[str | None,
         ]
     if not selected:
         return None, []
-    value = re.sub(r"\s+", " ", " ".join(line.text for line in selected)).strip()
+    selected = [line for line in selected if not _is_ocr_decoration(line.text)]
+    value = _description_text(selected)
     return value or None, selected
 
 

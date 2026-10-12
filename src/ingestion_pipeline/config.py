@@ -94,6 +94,8 @@ class DocumentConfig:
 
     source: str = "ad-hoc"
     ocr_language: str = "spa+eng"
+    ocr_engine: str = "tesseract"
+    ocr_runtime: str = "cpu"
     dpi: int = 220
     max_pages: int = 100
     tesseract_config: str = "--psm 11"
@@ -101,6 +103,10 @@ class DocumentConfig:
     card_vertical_gap: float = 90.0
     confidence_threshold: float = 0.65
     block_low_confidence: bool = True
+    quality_gate: bool = False
+    strict_visual: bool = False
+    min_description_chars: int = 40
+    description_noise_tokens: tuple[str, ...] = ()
 
     @classmethod
     def from_file(cls, path: Path) -> DocumentConfig:
@@ -109,11 +115,23 @@ class DocumentConfig:
             raise ValueError(f"La configuración documental {path} debe ser un objeto YAML.")
         ocr = raw.get("ocr", {}) or {}
         layout = raw.get("layout", {}) or {}
+        quality = raw.get("quality", {}) or {}
+        if not isinstance(quality, dict):
+            raise ValueError("`quality` debe ser un objeto en la configuracion documental.")
+        noise_tokens = (
+            quality.get("description_noise_tokens", quality.get("noise_tokens", [])) or []
+        )
+        if not isinstance(noise_tokens, list) or not all(
+            isinstance(value, str) for value in noise_tokens
+        ):
+            raise ValueError("`quality.noise_tokens` debe ser una lista de textos.")
         if not isinstance(ocr, dict) or not isinstance(layout, dict):
             raise ValueError("`ocr` y `layout` deben ser objetos en la configuración documental.")
         config = cls(
             source=str(raw.get("source", path.stem)),
             ocr_language=str(ocr.get("language", "spa+eng")),
+            ocr_engine=str(ocr.get("engine", "tesseract")).casefold(),
+            ocr_runtime=str(ocr.get("runtime", "cpu")).casefold(),
             dpi=int(ocr.get("dpi", 220)),
             max_pages=int(raw.get("max_pages", 100)),
             tesseract_config=str(ocr.get("tesseract_config", "--psm 11")),
@@ -121,6 +139,10 @@ class DocumentConfig:
             card_vertical_gap=float(layout.get("card_vertical_gap", 90.0)),
             confidence_threshold=float(layout.get("confidence_threshold", 0.65)),
             block_low_confidence=bool(layout.get("block_low_confidence", True)),
+            quality_gate=bool(quality.get("gate", quality.get("quality_gate", False))),
+            strict_visual=bool(quality.get("strict_visual", False)),
+            min_description_chars=int(quality.get("min_description_chars", 40)),
+            description_noise_tokens=tuple(str(value).casefold() for value in noise_tokens),
         )
         config.validate()
         return config
@@ -128,6 +150,10 @@ class DocumentConfig:
     def validate(self) -> None:
         if not self.ocr_language.strip():
             raise ValueError("La configuración OCR requiere un idioma, por ejemplo `spa+eng`.")
+        if self.ocr_engine not in {"tesseract", "paddleocr", "auto"}:
+            raise ValueError("`ocr.engine` debe ser `tesseract`, `paddleocr` o `auto`.")
+        if self.ocr_runtime not in {"cpu", "gpu", "gpu:0"}:
+            raise ValueError("`ocr.runtime` debe ser `cpu`, `gpu` o `gpu:0`.")
         if self.dpi < 72 or self.dpi > 600:
             raise ValueError("`ocr.dpi` debe estar entre 72 y 600.")
         if self.max_pages < 1:
@@ -138,6 +164,8 @@ class DocumentConfig:
             raise ValueError("`layout.card_vertical_gap` debe ser mayor que cero.")
         if not 0 <= self.confidence_threshold <= 1:
             raise ValueError("`layout.confidence_threshold` debe estar entre 0 y 1.")
+        if self.min_description_chars < 0:
+            raise ValueError("`quality.min_description_chars` no puede ser negativo.")
 
 
 def load_mapping_or_empty(path: Path | None, entity: str | None) -> MappingConfig:

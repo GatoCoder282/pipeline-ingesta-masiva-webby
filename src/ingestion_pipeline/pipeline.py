@@ -84,6 +84,8 @@ def prepare_document_run(
     """Extract a visual catalog and persist products, variants and evidence."""
     settings = ExtractionSettings(
         ocr_language=document_config.ocr_language,
+        ocr_engine=document_config.ocr_engine,
+        ocr_runtime=document_config.ocr_runtime,
         dpi=document_config.dpi,
         max_pages=document_config.max_pages,
         tesseract_config=document_config.tesseract_config,
@@ -152,6 +154,13 @@ def prepare_document_run(
     )
     invalid_rows = product_result.report.invalid_rows + variant_result.report.invalid_rows
     valid_rows = product_result.report.valid_rows + variant_result.report.valid_rows
+    quality_counts = {
+        status: sum(1 for item in catalog.description_quality if item.get("status") == status)
+        for status in ("pass", "reconstruct", "quarantine")
+    }
+    quality_blocked = document_config.quality_gate and any(
+        item.get("status") != "pass" for item in catalog.description_quality
+    )
     report: dict[str, object] = {
         "run_id": manifest.run_id,
         "input_kind": "document",
@@ -164,10 +173,18 @@ def prepare_document_run(
         "invalid_rows": invalid_rows,
         "omitted_rows": product_result.report.omitted_rows + variant_result.report.omitted_rows,
         "blocking_errors": len(product_result.report.issues) + len(variant_result.report.issues),
+        "description_quality": {
+            "gate_enabled": document_config.quality_gate,
+            "strict_visual": document_config.strict_visual,
+            "counts": quality_counts,
+            "blocked": quality_blocked,
+            "items": list(catalog.description_quality),
+        },
         "approved_for_publish": (
             product_result.report.valid_rows > 0
             and product_result.report.invalid_rows == 0
             and variant_result.report.invalid_rows == 0
+            and not quality_blocked
         ),
         "entities": {
             "productos": product_result.report.as_json(),

@@ -284,6 +284,11 @@ def _keep_bottom_only(
             variant_issues=variant_issues,
             warnings=(*catalog.warnings, warning),
             unparsed_cards=unparsed,
+            description_quality=tuple(
+                item
+                for item in catalog.description_quality
+                if item.get("row_number") in product_rows
+            ),
         ),
         warning,
     )
@@ -323,6 +328,13 @@ def _rebase_catalog(
                 "row_number": product_row_map.get(item.get("row_number"), item.get("row_number")),
             }
             for item in catalog.unparsed_cards
+        ),
+        description_quality=tuple(
+            {
+                **item,
+                "row_number": product_row_map.get(item.get("row_number"), item.get("row_number")),
+            }
+            for item in catalog.description_quality
         ),
     )
 
@@ -448,10 +460,12 @@ def prepare_batch_run(
     manifest.run_id = batch_id
     manifest.input_kind = "document"
     manifest.document_type = "mixed"
-    manifest.extraction_engine = "pymupdf+tesseract"
+    manifest.extraction_engine = f"pymupdf+{document_config.ocr_engine}"
 
     settings = ExtractionSettings(
         ocr_language=document_config.ocr_language,
+        ocr_engine=document_config.ocr_engine,
+        ocr_runtime=document_config.ocr_runtime,
         dpi=document_config.dpi,
         max_pages=document_config.max_pages,
         tesseract_config=document_config.tesseract_config,
@@ -503,11 +517,14 @@ def prepare_batch_run(
     variant_issues: list[ValidationIssue] = []
     unparsed_cards: list[dict[str, object]] = []
     extraction_warnings: list[str] = []
+    description_quality: list[dict[str, object]] = []
     product_row = 2
     variant_row = 2
     for result in results:
         if result.catalog is None:
             continue
+        if result.extraction is not None:
+            extraction_warnings.extend(result.extraction.warnings)
         catalog = _rebase_catalog(
             result.catalog, product_start=product_row, variant_start=variant_row
         )
@@ -519,6 +536,7 @@ def prepare_batch_run(
         variant_issues.extend(catalog.variant_issues)
         unparsed_cards.extend(catalog.unparsed_cards)
         extraction_warnings.extend(catalog.warnings)
+        description_quality.extend(catalog.description_quality)
 
     # Cards with no name remain auditable in unparsed_cards/quarantine, but do
     # not become blank product rows in the review CSV.
@@ -572,11 +590,19 @@ def prepare_batch_run(
     source_summaries = [_source_summary(result) for result in results]
     failed_sources = [summary for summary in source_summaries if summary["status"] == "failed"]
     blocking_errors = len(product_result.report.issues) + len(variant_result.report.issues)
+    quality_counts = {
+        status: sum(1 for item in description_quality if item.get("status") == status)
+        for status in ("pass", "reconstruct", "quarantine")
+    }
+    quality_blocked = document_config.quality_gate and any(
+        item.get("status") != "pass" for item in description_quality
+    )
     approved_for_publish = (
         not failed_sources
         and product_result.report.valid_rows > 0
         and product_result.report.invalid_rows == 0
         and variant_result.report.invalid_rows == 0
+        and not quality_blocked
     )
     report: dict[str, object] = {
         "run_id": batch_id,
@@ -615,10 +641,15 @@ def prepare_batch_run(
                 1 for record in product_candidates if not record.data.get("nombre")
             ),
             "descriptions_missing": sum(
-                1
-                for record in product_candidates
-                if not record.data.get("descripcion")
+                1 for record in product_candidates if not record.data.get("descripcion")
             ),
+            "descriptions": {
+                "gate_enabled": document_config.quality_gate,
+                "strict_visual": document_config.strict_visual,
+                "counts": quality_counts,
+                "blocked": quality_blocked,
+                "items": description_quality,
+            },
         },
         "entities": {
             "productos": product_result.report.as_json(),
