@@ -108,30 +108,80 @@ def _date(value: object) -> date | None:
     raise ValueError("fecha inválida; usa aaaa-mm-dd o dd/mm/aaaa")
 
 
-def _attributes(value: object) -> dict[str, str] | None:
-    if value is None or isinstance(value, dict):
-        return value or None
-    text = str(value).strip()
+def normalize_attribute_key(value: object) -> str:
+    """Return the stable key representation used inside a variant attribute object."""
+    text = unicodedata.normalize("NFKD", str(value)).strip()
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    text = re.sub(r"[^A-Za-z0-9]+", "_", text).strip("_").lower()
     if not text:
+        raise ValueError("las claves de atributos no pueden estar vacías")
+    return text
+
+
+def _attribute_object_pairs(pairs: list[tuple[object, object]]) -> dict[str, object]:
+    parsed: dict[str, object] = {}
+    for raw_key, raw_value in pairs:
+        key = normalize_attribute_key(raw_key)
+        if key in parsed:
+            raise ValueError(f"la clave de atributo {key!r} está repetida")
+        parsed[key] = raw_value
+    return parsed
+
+
+def normalize_attributes(value: object) -> dict[str, str] | None:
+    """Parse one or more non-empty key/value attributes deterministically.
+
+    Webby receives the complete combination in one JSON object.  Values stay
+    textual because an attribute such as ``talla`` or ``color`` is a label,
+    not a numeric measure, even when it contains digits.
+    """
+    if value is None:
         return None
-    try:
-        parsed = json.loads(text)
-        if isinstance(parsed, dict):
-            return {str(key).strip(): str(val).strip() for key, val in parsed.items()}
-    except json.JSONDecodeError:
-        pass
+    if isinstance(value, dict):
+        parsed: object = value
+    else:
+        text = str(value).strip()
+        if not text:
+            return None
+        try:
+            parsed = json.loads(text, object_pairs_hook=_attribute_object_pairs)
+        except json.JSONDecodeError:
+            parsed = None
+        if parsed is None:
+            pairs: list[str] = []
+            for pair in re.split(r"[;|\n]", text):
+                pair = pair.strip()
+                if pair:
+                    pairs.append(pair)
+            parsed = {}
+            for pair in pairs:
+                separator = "=" if "=" in pair else ":" if ":" in pair else None
+                if separator is None:
+                    raise ValueError("atributos deben ser JSON o clave=valor;clave=valor")
+                key, item_value = pair.split(separator, 1)
+                normalized_key = normalize_attribute_key(key)
+                if normalized_key in parsed:
+                    raise ValueError(f"la clave de atributo {normalized_key!r} está repetida")
+                parsed[normalized_key] = item_value
+    if not isinstance(parsed, dict):
+        raise ValueError("atributos debe ser un objeto JSON de clave y valor")
+
     result: dict[str, str] = {}
-    for pair in re.split(r"[;\n]", text):
-        pair = pair.strip()
-        if not pair:
-            continue
-        separator = "=" if "=" in pair else ":" if ":" in pair else None
-        if separator is None:
-            raise ValueError("atributos deben ser JSON o clave=valor;clave=valor")
-        key, value = pair.split(separator, 1)
-        if key.strip():
-            result[key.strip()] = value.strip()
+    for raw_key, raw_value in parsed.items():
+        key = normalize_attribute_key(raw_key)
+        if raw_value is None or isinstance(raw_value, (dict, list, tuple, set)):
+            raise ValueError(f"el valor del atributo {key!r} debe ser texto o escalar")
+        item_value = str(raw_value).strip()
+        if not item_value:
+            raise ValueError(f"el valor del atributo {key!r} no puede estar vacío")
+        if key in result:
+            raise ValueError(f"la clave de atributo {key!r} está repetida")
+        result[key] = item_value
     return result or None
+
+
+def _attributes(value: object) -> dict[str, str] | None:
+    return normalize_attributes(value)
 
 
 def coerce_value(value: object, definition: FieldDefinition) -> object | None:
