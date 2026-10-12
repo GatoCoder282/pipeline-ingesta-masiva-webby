@@ -1,29 +1,117 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://webby.local/schemas/catalog.schema.json",
-  "title": "Canonical catalog result",
+  "title": "Canonical Webby catalog result",
+  "description": "Final products and variants contract for bulk ingestion.",
   "type": "object",
   "required": ["run_id", "source_file", "products", "variants"],
   "properties": {
     "run_id": { "type": "string", "format": "uuid" },
     "source_file": { "type": "string" },
-    "products": { "$ref": "#/$defs/recordList" },
-    "variants": { "$ref": "#/$defs/recordList" }
+    "products": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/productRecord" }
+    },
+    "variants": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/variantRecord" }
+    }
   },
   "$defs": {
-    "recordList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["row_number", "entity", "data", "source"],
-        "properties": {
-          "row_number": { "type": "integer", "minimum": 2 },
-          "entity": { "enum": ["productos", "variantes"] },
-          "data": { "type": "object" },
-          "source": { "type": "object" }
-        },
-        "additionalProperties": false
+    "decimal": {
+      "description": "Non-negative decimal. JSONL may carry CSV-ready text.",
+      "oneOf": [
+        { "type": "number", "minimum": 0 },
+        {
+          "type": "string",
+          "pattern": "^(?:0|[0-9]+(?:[.,][0-9]+)?)$"
+        }
+      ]
+    },
+    "booleanValue": {
+      "oneOf": [
+        { "type": "boolean" },
+        { "type": "string", "enum": ["", "0", "1", "false", "true"] }
+      ]
+    },
+    "attributeObject": {
+      "title": "Variant attribute combination",
+      "description": "All options for one variant in one object; keys are normalized snake_case.",
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
       }
+    },
+    "productData": {
+      "type": "object",
+      "required": ["sku", "nombre"],
+      "properties": {
+        "sku": { "type": "string", "minLength": 1 },
+        "nombre": { "type": "string", "minLength": 1 },
+        "descripcion": { "type": "string" },
+        "descripcion_corta": { "type": "string" },
+        "categoria": { "type": "string" },
+        "marca": { "type": "string" },
+        "tipo": { "type": "string", "enum": ["simple", "variable", "servicio"] },
+        "destacado": { "$ref": "#/$defs/booleanValue" },
+        "es_digital": { "$ref": "#/$defs/booleanValue" },
+        "tags": { "type": "string" },
+        "atributos": { "$ref": "#/$defs/attributeObject" },
+        "precio": { "$ref": "#/$defs/decimal" },
+        "precio_comparacion": { "$ref": "#/$defs/decimal" },
+        "costo": { "$ref": "#/$defs/decimal" },
+        "activo": { "$ref": "#/$defs/booleanValue" },
+        "peso": { "$ref": "#/$defs/decimal" },
+        "stock": { "$ref": "#/$defs/decimal" },
+        "stock_minimo": { "$ref": "#/$defs/decimal" }
+      },
+      "additionalProperties": false
+    },
+    "variantData": {
+      "type": "object",
+      "required": ["sku_producto", "sku_variante", "atributos"],
+      "properties": {
+        "sku_producto": { "type": "string", "minLength": 1 },
+        "sku_variante": { "type": "string", "minLength": 1 },
+        "atributos": { "$ref": "#/$defs/attributeObject" },
+        "precio": { "$ref": "#/$defs/decimal" },
+        "precio_comparacion": { "$ref": "#/$defs/decimal" },
+        "stock": { "$ref": "#/$defs/decimal" },
+        "activa": { "$ref": "#/$defs/booleanValue" }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "description": "Page/block evidence and enrichment provenance.",
+      "additionalProperties": true
+    },
+    "productRecord": {
+      "type": "object",
+      "required": ["row_number", "entity", "data", "source"],
+      "properties": {
+        "row_number": { "type": "integer", "minimum": 2 },
+        "entity": { "const": "productos" },
+        "data": { "$ref": "#/$defs/productData" },
+        "source": { "$ref": "#/$defs/source" }
+      },
+      "additionalProperties": true
+    },
+    "variantRecord": {
+      "type": "object",
+      "required": ["row_number", "entity", "data", "source"],
+      "properties": {
+        "row_number": { "type": "integer", "minimum": 2 },
+        "entity": { "const": "variantes" },
+        "data": { "$ref": "#/$defs/variantData" },
+        "source": { "$ref": "#/$defs/source" }
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": false

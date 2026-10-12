@@ -59,3 +59,40 @@ def test_validation_does_not_report_duplicate_variants_without_parent_sku() -> N
 
     assert result.report.invalid_rows == 2
     assert {issue.code for issue in result.report.issues} == {"required_field_missing"}
+
+
+def test_validation_uses_the_complete_multi_attribute_combination_as_identity() -> None:
+    records = [
+        NormalizedRecord(
+            2,
+            "variantes",
+            {
+                "sku_producto": "P-1",
+                "sku_variante": "P-1-V01",
+                "atributos": "color=rojo;talla=M",
+            },
+            {"source_row": 2},
+        ),
+        NormalizedRecord(
+            3,
+            "variantes",
+            {
+                "sku_producto": "P-1",
+                "sku_variante": "P-1-V99",
+                "atributos": {"talla": "M", "color": "rojo"},
+            },
+            {"source_row": 3},
+        ),
+    ]
+
+    result = validate_records(
+        records,
+        run_id="run-1",
+        entity="variantes",
+        source_file="catalogo.csv",
+        total_rows=2,
+    )
+
+    assert result.report.valid_rows == 1
+    assert result.report.invalid_rows == 1
+    assert result.report.issues[0].code == "duplicate_in_batch"

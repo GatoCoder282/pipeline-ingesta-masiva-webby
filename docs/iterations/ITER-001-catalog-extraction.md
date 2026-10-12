@@ -70,7 +70,7 @@ antes del reproceso solo vació artefactos generados en `raw`, `extracted`,
 
 ## Workflow implementado
 
-```text
+```
 data/incoming
     |
     v

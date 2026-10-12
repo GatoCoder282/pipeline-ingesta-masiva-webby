@@ -9,6 +9,7 @@ from decimal import Decimal
 
 from ingestion_pipeline.domain.catalog import fields_for
 from ingestion_pipeline.domain.models import NormalizedRecord, ValidationIssue, ValidationReport
+from ingestion_pipeline.normalization.mapping import normalize_attributes
 
 
 @dataclass
@@ -23,10 +24,14 @@ def _identity(record: NormalizedRecord) -> str | None:
     if record.entity == "productos":
         return str(data.get("sku", "")).strip() or None
     if record.entity == "variantes":
-        if not str(data.get("sku_producto", "")).strip():
+        parent_sku = str(data.get("sku_producto", "")).strip()
+        if not parent_sku:
             return None
         attrs = json.dumps(data.get("atributos", {}), ensure_ascii=False, sort_keys=True)
-        return f"{data.get('sku_producto', '')}|{data.get('sku_variante', '')}|{attrs}"
+        # A variant combination is unique per parent independently of the
+        # optional SKU. This prevents two different SKUs from representing
+        # the same multi-attribute selection.
+        return f"{parent_sku}|{attrs}"
     if record.entity == "precios":
         return f"{data.get('sku', '')}|{data.get('sku_variante', '')}|{data.get('lista', '')}"
     return str(data.get("celular") or data.get("email") or data.get("nombre") or "").strip() or None
@@ -106,15 +111,30 @@ def validate_records(
                     field="tipo",
                 )
             )
-        if entity == "variantes" and not isinstance(record.data.get("atributos"), dict):
-            row_issues.append(
-                ValidationIssue(
-                    record.row_number,
-                    "invalid_attributes",
-                    "atributos debe contener al menos un par clave=valor",
-                    field="atributos",
+        if entity == "variantes":
+            try:
+                attributes = normalize_attributes(record.data.get("atributos"))
+            except ValueError as exc:
+                row_issues.append(
+                    ValidationIssue(
+                        record.row_number,
+                        "invalid_attributes",
+                        f"atributos: {exc}",
+                        field="atributos",
+                    )
                 )
-            )
+            else:
+                if not attributes:
+                    row_issues.append(
+                        ValidationIssue(
+                            record.row_number,
+                            "invalid_attributes",
+                            "atributos debe contener al menos un par clave=valor",
+                            field="atributos",
+                        )
+                    )
+                else:
+                    record.data["atributos"] = attributes
         row_issues.extend(
             issue
             for issue in _numeric_rules(record.data, record.row_number)
