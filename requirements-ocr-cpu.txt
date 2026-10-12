@@ -1,0 +1,4 @@
+# Optional visual OCR runtime. Keep this separate from the base CLI so normal
+# ingestion remains lightweight and deterministic.
+paddlepaddle==3.2.0
+paddleocr==3.3.2

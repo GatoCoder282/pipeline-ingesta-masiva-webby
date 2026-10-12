@@ -101,7 +101,23 @@ services:
       - ./:/workspace
     entrypoint: ["uv", "run", "ingestion"]
 
+  ocr-worker:
+    profiles: ["ocr"]
+    build:
+      context: .
+      dockerfile: Dockerfile.ocr
+    working_dir: /workspace
+    environment:
+      UV_PROJECT_ENVIRONMENT: /opt/ingestion-venv
+      INGESTION_DATA_DIR: /workspace/data
+      PADDLEX_HOME: /root/.paddlex
+    volumes:
+      - ./:/workspace
+      - paddlex_models:/root/.paddlex
+    entrypoint: ["uv", "run", "ingestion"]
+
 volumes:
   ingestion_postgres_data:
   kestra_storage:
   n8n_data:
+  paddlex_models:

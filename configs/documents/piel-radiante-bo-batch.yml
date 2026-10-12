@@ -11,4 +11,8 @@ category_files:
 keep_bottom_only:
   - "WhatsApp Image 2026-08-31 at 19.44.22.jpeg"
 
-excluded_files: []
+excluded_files:
+  # El PDF se incorpora en un paso dedicado con anclas de página y variante;
+  # si entra al lote visual, sus portadas y separadores se interpretan como
+  # tarjetas de producto.
+  - "Catalogo Profesional 2026 ZOÉ.pdf"
